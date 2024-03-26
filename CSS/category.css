@@ -27,6 +27,13 @@
     --text-clr: #697296;
     --border-clr: #d1dce3;
     --icon-clr: #c2c8df;
+    --sz: 10vmin;
+    /* size */
+    --on: #269fe5;
+    /* color on */
+    --of: #616774;
+    /* color off */
+    --tr: all 0.25s ease 0s;
 }
 
 html {
@@ -76,6 +83,7 @@ li {
     justify-content: center;
     padding: 2rem 1rem;
     border-radius: .30rem;
+    transition: all 0.3s;
 }
 
 .signle-item:hover {
@@ -90,10 +98,11 @@ li {
     background-color: #F5F5F5;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    transition: all 0.3s;
 }
 
-.signle-item .icon-img:hover {
+.signle-item:hover .icon-img {
     background: linear-gradient(135deg, #FC016C, #FD016A, #D8019C, #C501B7, #9E00EB);
 
 }
@@ -107,9 +116,10 @@ li {
     font-weight: 500;
     border-radius: .30rem;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-.signle-item button:hover {
+.signle-item:hover button {
     background: linear-gradient(135deg, #FC016C, #FD016A, #D8019C, #C501B7, #9E00EB);
     color: #fff;
 }
@@ -128,6 +138,12 @@ li {
     font-size: .95rem;
     font-weight: 500;
     border-radius: .30rem;
+    transition: all 0.3s;
+}
+
+.continue-btn:hover {
+    background: linear-gradient(135deg, #FC016C, #FD016A, #D8019C, #C501B7, #9E00EB);
+    color: #fff;
 }
 
 .divider {
@@ -151,124 +167,54 @@ li {
     max-width: 57%;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    bottom: 2.6rem;
 }
 
 /* toggle */
-.toggle {
+
+ .toggle-content {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0rem;
 }
-
-.toggle-button-cover {
-    display: table-cell;
-    position: relative;
-    width: 120px;
-    height: 140px;
-    box-sizing: border-box;
-}
-
-.button-cover {
-    height: 100px;
-    margin: 20px;
-    border-radius: 4px;
-}
-
-.button-cover:before {
-    counter-increment: button-counter;
-    content: counter(button-counter);
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: #d7e3e3;
-    font-size: 12px;
-    line-height: 1;
-    padding: 5px;
-}
-
-.button-cover,
-.knobs,
-.layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.button {
-    position: relative;
-    top: 50%;
-    width: 74px;
-    height: 36px;
-    margin: -20px auto 0 auto;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.button.r,
-.button.r .layer {
-    border-radius: 100px;
-}
-
-.checkbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-}
-
-.knobs {
-    z-index: 2;
-}
-
-.layer {
-    width: 100%;
+ .toggle {
+    position : relative ;
+    display : inline-block;
+    width : 110px;
+    height : 45px;
     background: linear-gradient(135deg, #FC016C, #FD016A, #D8019C, #C501B7, #9E00EB);
-    transition: 0.3s ease all;
-    z-index: 1;
+    border-radius: 30px;
+    border: 2px solid gray;
 }
 
-/* Button 1 */
-#button-1 .knobs:before {
-    content: "";
+.toggle:after {
+    content: '';
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: 20px;
-    height: 10px;
-    color: #fff;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    padding: 9px 4px;
-    background-color: #fff;
+    width: 45px;
+    height: 44px;
     border-radius: 50%;
-    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
-}
-
-#button-1 .checkbox:checked+.knobs:before {
-    content: "";
-    left: 42px;
     background-color: #fff;
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+.checkbox:checked + .toggle::after {
+    left : 62px; 
 }
 
-#button-1 .checkbox:checked~.layer {
-    background-color: #a6a0a0;
+.checkbox:checked + .toggle {
+    background: #560480;
 }
-
-#button-1 .knobs,
-#button-1 .knobs:before,
-#button-1 .layer {
-    transition: 0.3s ease all;
+       
+.checkbox { 
+    display : none;
 }
 
 /* end toggle */
+
 .categoryPricePlan-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -326,6 +272,7 @@ li {
 
     .categoryPricePlan-content {
         height: 100%;
+        bottom: 0rem;
     }
 
     .categoryPricePlan-info {
@@ -344,6 +291,7 @@ li {
 
     .categoryPricePlan-content {
         height: 100%;
+        bottom: 0rem;
     }
 
     .categoryPricePlan-info {
@@ -351,22 +299,22 @@ li {
     }
 }
 
-@media screen and (min-width: 270px) and (max-width: 300px) {
-    .toggle {
+/* @media screen and (min-width: 270px) and (max-width: 300px) {
+    .toggle-content {
         flex-direction: column;
         gap: 0rem;
     }
 
-    .toggle .yearly {
+    .toggle-content .yearly {
         position: relative;
         top: 40px;
     }
 
-    .toggle .monthly {
+    .toggle-content .monthly {
         position: relative;
         bottom: 40px;
     }
-}
+} */
 
 
 
