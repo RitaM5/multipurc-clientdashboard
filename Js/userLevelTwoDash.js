@@ -109,6 +109,42 @@ const showMenu = (toggleId, navId) =>{
  
  showMenu('nav-toggle','nav-menu')
  
+
+// ---------Dashboard Content----------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    var rawData = [0, 2000, 350, 5004, 2000, 3000, 4500, 1544, 5037, 1000, 3206, 745,];
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep','Oct', 'Nov', 'Dec'],
+            datasets: [{
+                label: 'Sells',
+                data: rawData,
+				backgroundColor: 'rgba(0, 99, 132)',
+                borderColor: 'rgb(0, 99, 132)',
+                borderWidth: 3
+            }]
+        },
+        options: {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return 'Sells:'+ ' ' + '$' + context.parsed.y;
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
+
+
+// ----------End Dashboard Content------------
+
 // ------------Pos System------------
 
 // for pos system card item popup

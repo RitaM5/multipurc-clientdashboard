@@ -30,6 +30,7 @@ html {
 body {
     background: var(--light);
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -299,19 +300,6 @@ li {
     left: 60px;
 }
 
-/* nav .toggle-sidebar {
-    font-size: 14px;
-    cursor: pointer;
-    width: 1.7rem; 
-    height: 1.7rem; 
-    position: relative; 
-    bottom: .55rem; 
-    border-radius:100%; 
-    background-color: darkgreen; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-} */
 /* NAVBAR */
 nav {
     background: var(--light);
@@ -375,6 +363,7 @@ nav {
     gap: 1.3rem;
     width: 100%;
     max-width: 600px;
+    left: 1.5rem;
 }
 
 nav form {
@@ -525,6 +514,92 @@ nav .profile .profile-link a:hover {
 
 /* NAVBAR */
 
+/* -----Dashboard content---- */
+
+.total-catelog-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .75rem;
+    padding: 2rem 0rem;
+}
+
+.single-catelog {
+    padding: 1.3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .45rem;
+    border-radius: 1rem;
+}
+
+.parcentage-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.parcentage-content button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: .30rem .80rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    cursor: pointer;
+}
+
+/* chart */
+.dynamic-chart-content{
+    width: 60%;
+    padding: 1.3rem 0rem;
+}
+
+/* end chart */
+
+/* table */
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.table th {
+    background-color: #F0F0F0;
+    text-align: center;
+    font-size: 1rem;
+    padding: .60rem 0rem;
+    font-weight: 600;
+}
+
+.table td {
+    text-align: center;
+    font-size: .95rem;
+    padding: .55rem 0rem;
+}
+
+.table tbody .id{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.table td input {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* table end */
+/* -----End Dashboard content---- */
+
 /* for responsive */
 @media screen and (max-width: 999px) {
     #content {
@@ -532,19 +607,129 @@ nav .profile .profile-link a:hover {
         width: calc(100% - 60px);
         transition: all .3s ease;
     }
-   form{
-    display: none;
-   }
-   .right-nav {
-    max-width: 300px;
-}
+
+    form {
+        display: none;
+    }
+
+    .right-nav {
+        max-width: 300px;
+    }
+    .dynamic-chart-content{
+        width: 100%;;
+    }
 }
 
-@media screen and (min-width: 270px) and (max-width: 1199px) {
+@media screen and (min-width: 272px) and (max-width: 1199px) {
     .left-nav {
         gap: 8px;
     }
+}
 
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .total-catelog-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .total-catelog-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .dynamic-chart-content{
+        width: 100%;;
+    }
+
+    /* table */
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tbody .id{
+        justify-content: end; 
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+}
+
+@media screen and (min-width: 272px) and (max-width: 576px) {
+    .total-catelog-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .dynamic-chart-content{
+        width: 100%;;
+    }
+
+    /* table */
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .table tr {
+        margin-bottom: 15px;
+    }
+
+    .table tbody .id{
+        justify-content: end; 
+    }
+
+    .table td {
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width:272px) and (max-width: 640px) {
@@ -555,13 +740,15 @@ nav .profile .profile-link a:hover {
     .right-nav {
         gap: .50rem;
         position: relative;
-        left: 1.5rem;
+
         max-width: 100%;
     }
-    .left-nav{
+
+    .left-nav {
         max-width: 100%;
         width: 100%;
-       }
+    }
+
     .profile-name .name {
         display: none;
     }

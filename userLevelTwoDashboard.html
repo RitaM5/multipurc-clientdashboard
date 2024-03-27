@@ -319,9 +319,10 @@
                 </a>
                 <div class="visit-site">
                     <a href="#">
-                        <img src="https://img.icons8.com/ios/28/domain--v1.png" alt="domain--v1"/>
+                        <img src="https://img.icons8.com/ios/28/domain--v1.png" alt="domain--v1" />
                     </a>
-                    <a href="#" class="visit-link" style="text-decoration: underline; color: #000;">Visit Your Website</a>
+                    <a href="#" class="visit-link" style="text-decoration: underline; color: #000;">Visit Your
+                        Website</a>
                 </div>
             </div>
             <div class="right-nav">
@@ -351,7 +352,7 @@
                             alt="">
                         <div class="name">
                             <p style="font-size: 12px; font-weight: 600;">William C. Schroyer</p>
-                            <span style="font-size: 10px; text-align: left; color:rgb(71, 69, 67);">admin</span>
+                            <span style="font-size: 11px; text-align: left; color:rgb(71, 69, 67);">admin</span>
                         </div>
                         <i style="margin-left: .65rem;" class="fas fa-angle-down down-angle"></i>
                     </div>
@@ -366,8 +367,291 @@
         <!-- NAVBAR -->
         <!-- main content -->
         <!-- dashboard -->
-        <div id="userLevel2-dashboard" style="padding: 2.5rem 0rem;">
-            <h2>userLevel2 Dashboard</h2>
+        <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
+            <div>
+                <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
+                <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
+            </div>
+            <div class="total-catelog-container">
+                <div class="single-catelog" style="background-color: #EAF0FE;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total Page</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">21</p>
+                    <div class="parcentage-content">
+                        <button><i style="font-size: 10px;" class="fas fa-angle-up"></i>
+                            <span style="color: #05A601;">14.9%</span></button>
+                        <p>(+43.21%)</p>
+                    </div>
+                </div>
+                <div class="single-catelog" style="background-color: #EDF5E8;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total Admin</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">2</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EAF0FE;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total user</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">19</p>
+                </div>
+                <div class="single-catelog" style="background-color: #FCF0E4;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total blogs</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">24</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EDF5E8;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total services</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">16</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EDF5E8;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total language</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">2</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EAF0FE;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total brand</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">7</p>
+                    <div class="parcentage-content">
+                        <button><i style="font-size: 10px;" class="fas fa-angle-up"></i>
+                            <span style="color: #05A601;">14.9%</span></button>
+                        <p>(+43.21%)</p>
+                    </div>
+                </div>
+                <div class="single-catelog" style="background-color: #FCF0E4;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total products</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">99</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EAF0FE;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total compaign</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">1</p>
+                </div>
+                <div class="single-catelog" style="background-color: #FCF0E4;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total event</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">24</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EDF5E8;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total job</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">80</p>
+                </div>
+                <div class="single-catelog" style="background-color: #EDF5E8;">
+                    <p style="font-size: 1rem; font-weight: 600;">Total arricle</p>
+                    <p style="font-size: 1.6rem; font-weight: 600;">12</p>
+                </div>
+            </div>
+            <div class="dynamic-chart-container" style="padding: 1.5rem 0rem;">
+                <p style="font-size: 1.3rem; font-weight: 600;">Sales Statics</p>
+                <div class="dynamic-chart-content">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="products-order-table" style="padding: 1.8rem 0rem;">
+                <p style="font-size: 1.3rem; font-weight: 600;">Recent Product Order Logs</p>
+                <table class="table" id="products-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Order ID</th>
+                            <th>User Name</th>
+                            <th>Order Amount</th>
+                            <th>Payment Status</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    1</p>
+                            </td>
+                            <td data-label="Order ID">173</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    2</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">MD Najmul Hasan</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    3</p>
+                            </td>
+                            <td data-label="Order ID">171</td>
+                            <td data-label="User Name">Nazmul Hasan Imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    2</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    5</p>
+                            </td>
+                            <td data-label="Order ID">173</td>
+                            <td data-label="User Name">Nazmul Hasan Imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    6</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="recent-donation-table" style="padding: 1.8rem 0rem;">
+                <p style="font-size: 1.3rem; font-weight: 600;">Recent Donation Logs</p>
+                <table class="table" id="recent-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Order ID</th>
+                            <th>User Name</th>
+                            <th>Order Amount</th>
+                            <th>Payment Status</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    1</p>
+                            </td>
+                            <td data-label="Order ID">173</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    2</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">MD Najmul Hasan</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    3</p>
+                            </td>
+                            <td data-label="Order ID">171</td>
+                            <td data-label="User Name">Nazmul Hasan Imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    2</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    5</p>
+                            </td>
+                            <td data-label="Order ID">173</td>
+                            <td data-label="User Name">Nazmul Hasan Imon</td>
+                            <td data-label="Order Amount">$254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #3DC85B; border: none; outline: none; cursor: pointer;">Complete</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID" class="id">
+                                <p
+                                    style="display: flex; align-items: center; justify-content: center; color: #fff; width: 25px; height: 25px; border-radius: 100%; background-color: #1B434D;">
+                                    6</p>
+                            </td>
+                            <td data-label="Order ID">172</td>
+                            <td data-label="User Name">N H imon</td>
+                            <td data-label="Order Amount">254</td>
+                            <td data-label="Payment Status">
+                                <button
+                                    style="padding: .20rem 1.5rem; font-weight: 500; color: #fff; border-radius: 4rem; background-color: #FF8125; border: none; outline: none; cursor: pointer;">Pending</button>
+                            </td>
+                            <td data-label="Created At">3 weeks ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <!-- end dashboard -->
 
@@ -1069,6 +1353,7 @@
         <!-- end main content -->
 
     </section>
+
     <!-- Include html2pdf.js -->
     <script src="path/to/html2pdf.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
