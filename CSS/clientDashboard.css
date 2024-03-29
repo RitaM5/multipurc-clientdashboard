@@ -159,7 +159,7 @@ li {
     top: 3px;
 }
 
-/* end sidebar */
+/* end searchber */
 
 /* sidemenu */
 #sidebar .side-menu {
@@ -246,8 +246,11 @@ li {
     transform: rotateZ(90deg);
 }
 
-#sidebar .side-menu>li>a.active,
-#sidebar .side-menu>li>a.active:hover {
+#sidebar .side-menu>li>a {
+   transition: all 0.3s;
+}
+/* #sidebar .side-menu>li>a.active, */
+#sidebar .side-menu>li>a:hover {
     background-color: var(--light);
     color: #373434;
     border-radius: 1.5rem;
@@ -598,6 +601,7 @@ nav .profile .profile-link a:hover {
 }
 
 /* table end */
+
 /* -----End Dashboard content---- */
 
 /* for responsive */

@@ -70,7 +70,6 @@ backIcon.addEventListener('click', function () {
 
 // PROFILE DROPDOWN
 const profile = document.querySelector('nav .profile');
-// const imgProfile = profile.querySelector('img');
 const dropdownProfile = profile.querySelector('.profile-link');
 
 profile.addEventListener('click', function () {
@@ -94,21 +93,6 @@ function addNewProduct(){
 	document.getElementById('userLevel2-posSystem').style.display = 'none';
 	document.getElementById('addNewProduct').style.display = 'block';
 }
-
-
-/*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) =>{
-	const toggle = document.getElementById(toggleId),
-		  nav = document.getElementById(navId)
- 
-	toggle.addEventListener('click', () =>{
-		nav.classList.toggle('show-menu')
-		toggle.classList.toggle('show-icon')
-	})
- }
- 
- showMenu('nav-toggle','nav-menu')
- 
 
 // ---------Dashboard Content----------
 
@@ -146,6 +130,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // ----------End Dashboard Content------------
 
 // ------------Pos System------------
+
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) =>{
+	const toggle = document.getElementById(toggleId),
+		  nav = document.getElementById(navId)
+ 
+	toggle.addEventListener('click', () =>{
+		nav.classList.toggle('show-menu')
+		toggle.classList.toggle('show-icon')
+	})
+ }
+ 
+ showMenu('nav-toggle','nav-menu')
 
 // for pos system card item popup
 var wrapper = document.querySelector(".product-wrapper");

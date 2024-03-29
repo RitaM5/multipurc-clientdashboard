@@ -13,7 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="./CSS/posSystem.css">
     <link rel="stylesheet" href="./CSS/addNew.css">
-    <link rel="stylesheet" href="./CSS/userLevelTwoDash.css">
+    <link rel="stylesheet" href="./CSS/clientDashboard.css">
 
 </head>
 
@@ -21,7 +21,7 @@
     <!-- this pages css file(clientDashboard.css) and js file(clientDashboard.js) by Rita-->
     <!-- SIDEBAR css lines(45-274)-->
     <section id="sidebar">
-        <!-- css lines(81-91) -->
+        <!-- css lines(82-92) -->
         <div class="brand">
             <img src="./img/clientDash_logo.png" alt="" srcset="">
         </div>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <!-- end profile-info -->
-        <!-- searchbar css lines(137-158) -->
+        <!-- searchbar css lines(137-160) -->
         <div class="search-bar">
             <div>
                 <span class="" style="margin-top: 10px;">
@@ -61,9 +61,9 @@
             </div>
         </div>
         <!-- end search bar -->
-        <!-- side menu css lines(162-273)-->
+        <!-- side menu css lines(162-288)-->
         <ul class="side-menu">
-            <!-- js lines(73-80) -->
+            <!-- js lines(1-98) -->
             <li onclick="showLevel2Dashboard()"><a href="" class="active"><i style="font-size: 15px;"
                         class='bx bxs-dashboard icon'></i>
                     <span>Dashboard</span></a>
@@ -301,8 +301,8 @@
     <!-- SIDEBAR -->
     <section id="content">
         <!-- NAVBAR -->
+        <!-- nav css lines(306-518) -->
         <nav>
-            <!-- <i class='bx bx-menu toggle-sidebar'></i> -->
             <div class="left-nav">
                 <a class="toggle-sidebar btn btn-topbar has-transition btn-icon p-0 d-flex align-items-center"
                     href="javascript:void(0)">
@@ -346,6 +346,7 @@
                         <span class="tooltip">Notification</span>
                     </a>
                 </div>
+                <!-- profile js lines(72-77) -->
                 <div class="profile">
                     <div class="profile-name">
                         <img src="https://demo.activeitzone.com/ecommerce/public/uploads/all/jxUqbB2ThpoDFZbBtPHaiy2pF7i02hDaFJEEF9rx.webp"
@@ -366,12 +367,13 @@
         </nav>
         <!-- NAVBAR -->
         <!-- main content -->
-        <!-- dashboard -->
+        <!-- dashboard css lines(520-604) & js lines(97-127)-->
         <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
             <div>
                 <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
                 <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
             </div>
+            <!-- catelog content css lines(522-556) -->
             <div class="total-catelog-container">
                 <div class="single-catelog" style="background-color: #EAF0FE;">
                     <p style="font-size: 1rem; font-weight: 600;">Total Page</p>
@@ -432,12 +434,18 @@
                     <p style="font-size: 1.6rem; font-weight: 600;">12</p>
                 </div>
             </div>
+            <!-- end catelog -->
+
+            <!-- sales chart container css lines(558-561) & js lines(99-127)-->
             <div class="dynamic-chart-container" style="padding: 1.5rem 0rem;">
                 <p style="font-size: 1.3rem; font-weight: 600;">Sales Statics</p>
                 <div class="dynamic-chart-content">
                     <canvas id="myChart"></canvas>
                 </div>
             </div>
+            <!-- end chart -->
+
+            <!-- table css lines(565-602) -->
             <div class="products-order-table" style="padding: 1.8rem 0rem;">
                 <p style="font-size: 1.3rem; font-weight: 600;">Recent Product Order Logs</p>
                 <table class="table" id="products-table">
@@ -1358,7 +1366,7 @@
     <script src="path/to/html2pdf.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="./js/userLevelTwoDash.js"></script>
+    <script src="./js/clientDashboard.js"></script>
 </body>
 
 </html>
