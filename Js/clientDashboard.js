@@ -131,57 +131,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ------------Pos System------------
 
-/*=============== SHOW MENU ===============*/
-const showMenu = (toggleId, navId) =>{
-	const toggle = document.getElementById(toggleId),
-		  nav = document.getElementById(navId)
- 
-	toggle.addEventListener('click', () =>{
-		nav.classList.toggle('show-menu')
-		toggle.classList.toggle('show-icon')
-	})
- }
- 
- showMenu('nav-toggle','nav-menu')
+// --------selects categroy--------
+document.addEventListener('DOMContentLoaded', function () {
+    let optionMenus = document.querySelector('.selects_category');
+    let selectedBtn = optionMenus.querySelector('.select-btn');
+    let optionsData = optionMenus.querySelectorAll('.category_options .option');
+    let Btn_text = optionMenus.querySelector('.sBtn-text');
 
-// for pos system card item popup
-var wrapper = document.querySelector(".product-wrapper");
-var close_btns = document.querySelectorAll(".close_btn");
+    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
 
-function showPopupContent() {
-	wrapper.classList.add("active");
-}
-close_btns.forEach(function (btn) {
-	btn.addEventListener("click", function () {
-		wrapper.classList.remove("active");
-	});
+    optionsData.forEach(option => {
+        option.addEventListener('click', () => {
+            let selectedOption = option.querySelector('.option-text').innerText;
+            Btn_text.value = selectedOption;
+            optionMenus.classList.remove('active');
+        });
+    });
 });
+// --------end selects categroy--------
 
-// variation image select
-function showImageOne(){
-	document.getElementById('image1').style.display = 'block';
-	document.getElementById('image2').style.display = 'none';
-	document.getElementById('image3').style.display = 'none';
-	document.getElementById('image4').style.display = 'none';
-}
-function showImageTwo(){
-	document.getElementById('image1').style.display = 'none';
-	document.getElementById('image2').style.display = 'block';
-	document.getElementById('image3').style.display = 'none';
-	document.getElementById('image4').style.display = 'none';
-}
-function showImageThree(){
-	document.getElementById('image1').style.display = 'none';
-	document.getElementById('image2').style.display = 'none';
-	document.getElementById('image3').style.display = 'block';
-	document.getElementById('image4').style.display = 'none';
-}
-function showImageFour(){
-	document.getElementById('image1').style.display = 'none';
-	document.getElementById('image2').style.display = 'none';
-	document.getElementById('image3').style.display = 'none';
-	document.getElementById('image4').style.display = 'block';
-}
+// --------selects brand--------
+document.addEventListener('DOMContentLoaded', function () {
+    let optionMenus = document.querySelector('.selects_brand');
+    let selectedBtn = optionMenus.querySelector('.select-btn');
+    let optionsData = optionMenus.querySelectorAll('.brand_category_options .option');
+    let Btn_text = optionMenus.querySelector('.sBtn-text');
+
+    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
+
+    optionsData.forEach(option => {
+        option.addEventListener('click', () => {
+            let selectedOption = option.querySelector('.option-text').innerText;
+            Btn_text.value = selectedOption;
+            optionMenus.classList.remove('active');
+        });
+    });
+});
+// --------end selects brand--------
 
 //  FOOD ITEM CARD
 

@@ -395,7 +395,7 @@ nav .form-group input:focus {
 
 nav .form-group .icon {
     position: absolute;
-    top: 50%;
+    top: 51%;
     transform: translateY(-50%);
     right: 16px;
     color: var(--dark-grey);

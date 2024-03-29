@@ -68,7 +68,7 @@
                         class='bx bxs-dashboard icon'></i>
                     <span>Dashboard</span></a>
             </li>
-            <li onclick="showPosSystem()">
+            <li>
 
                 <a href="#">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 13.79 16">
@@ -95,7 +95,7 @@
                     </svg>
                     <i class='bx bx-chevron-right icon-right'></i></a>
                 <ul class="side-dropdown">
-                    <li><a href="#">
+                    <li onclick="showPosSystem()"><a href="#">
                             <i class="fas fa-arrow-right left-arrow"
                                 style="font-size: .65rem; margin-right: .75rem;"></i>POS Manager
                         </a></li>
@@ -665,106 +665,61 @@
 
         <!-- pos system css file(posSystem.css) and js(clientDashboard.js) css lines(43-537) by rita-->
         <div id="userLevel2-posSystem" style="display: none;">
-            <div class="posSystem-container">
+            <div class="posSystem-container" style="padding: 3rem 0rem;">
                 <!-- item content css lines(44-384) -->
                 <div class="left-content">
                     <!-- header info css lines(61-107) -->
-                    <div class="header-info">
-                        <div class="title">
-                            <p style="font-weight: 600; font-size: 1.4rem;">Sales Analytic</p>
-                            <div style="display: flex; gap: .45rem;">
-                                <span><i class="fas fa-angle-left" style="color: #000; "></i><i
-                                        class="fas fa-angle-left" style="color: #000;"></i></span>
-                                <span><i class="fas fa-angle-right" style="color: #000;"></i><i
-                                        class="fas fa-angle-right" style="color: #000;"></i></span>
-                            </div>
+                    <div class="header-info-content">
+                        <div class="searchber_content">
+                            <form class="" action="#">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search...">
+                                    <i class='bx bx-search icon'></i>
+                                </div>
+                            </form>
                         </div>
-                        <div class="progress-items" style="padding: 1.6rem 0rem;">
-                            <div class="item-card">
-                                <div>
-                                    <p style="display: flex; gap:.30rem; align-items: center;"><i class="fas fa-gift"
-                                            style="color: #000;"></i><span
-                                            style="font-weight: 600; font-size: 1.1rem;">#410254</span></p>
-                                    <span style="color: #BCBDBD; font-weight: 600;">4 Items</span>
-                                </div>
-                                <button style="background-color: #2ECC30;"><span>Ready to serve</span><span
-                                        class="checkmark-circle-icon">&#10003;</span></button>
+                        <div class="selects_category">
+                            <div class="select-btn">
+                                <input type="text" class="sBtn-text" name="category" list="categories"
+                                    placeholder="">
+                                <i class="bx bx-chevron-down"></i>
                             </div>
-                            <div class="item-card">
-                                <div>
-                                    <p style="display: flex; gap:.30rem; align-items: center;"><i class="fas fa-gift"
-                                            style="color: #000;"></i><span
-                                            style="font-weight: 600; font-size: 1.1rem;">#410254</span></p>
-                                    <span style="color: #BCBDBD; font-weight: 600;">4 Items</span>
-                                </div>
-                                <button style="background-color: #F19221;"><span>In Progress</span><span
-                                        class="checkmark-circle-icon">&#10003;</span></button>
+                            <ul class="category_options">
+                                <li class="option">
+                                    <span class="option-text">Symphony Z20</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">Sony Experia</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">Xiaomi redmi 13c</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="selects_brand">
+                            <div class="select-btn">
+                                <input type="text" class="sBtn-text" name="category" list="categories"
+                                    placeholder="">
+                                <i class="bx bx-chevron-down"></i>
                             </div>
-                            <div class="item-card">
-                                <div>
-                                    <p style="display: flex; gap:.30rem; align-items: center;"><i class="fas fa-gift"
-                                            style="color: #000;"></i><span
-                                            style="font-weight: 600; font-size: 1.1rem;">#410254</span></p>
-                                    <span style="color: #BCBDBD; font-weight: 600;">4 Items</span>
-                                </div>
-                                <button style="background-color: #F19221;"><span>In Progress</span><span
-                                        class="checkmark-circle-icon">&#10003;</span></button>
-                            </div>
+                            <ul class="brand_category_options">
+                                <li class="option">
+                                    <span class="option-text">Symphony Z20</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">Sony Experia</span>
+                                </li>
+                                <li class="option">
+                                    <span class="option-text">Xiaomi redmi 13c</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!-- end header info -->
                     <!-- menu items css lines(110-196) and js lines(73-80)-->
                     <div class="menu-items" style="width: 100%;">
-                        <p style="font-weight: 600; font-size: 1.4rem;">Menu Items <span
-                                style="color: #BCBDBD; font-weight: 600;">(67)</span></p>
-
-                        <header class="header">
-                            <nav class="nav nav_container">
-                                <div class="nav__data">
-                                    <div class="nav__toggle" id="nav-toggle">
-                                        <i class="ri-menu-line nav__toggle-menu"></i>
-                                        <i class="ri-close-line nav__toggle-close"></i>
-                                    </div>
-                                </div>
-                                <!--=============== NAV MENU ===============-->
-                                <div class="nav__menu" id="nav-menu">
-                                    <ul class="nav__list">
-                                        <li class="active">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>All Menu</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>Appetizer</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>Soups</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>Appetizer</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>Soups</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="nav__link"><i
-                                                    style="font-size: 13px; position: relative; right: 3px; top: 1px;"
-                                                    class='bx bxs-dashboard icon'></i>Appetizer</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </header>
-                        <!--food items card css lines(201-381)-->
-                        <div class="food-content">
+                        <!--cloths items card css lines(201-381)-->
+                        <div class="cloths-content">
                             <div class="single-item">
                                 <div style=" padding: .35rem;">
                                     <!-- js lines(103-113) -->
@@ -857,108 +812,9 @@
                                     Stir-fried noodls <span style="color: #BCBDBD; font-weight: 600;">($31.0)</span></p>
                             </div>
                         </div>
-                        <!-- end food items card -->
+                        <!-- end cloths items card -->
                     </div>
                     <!-- end menu items -->
-                    <!-- for whole popup contents css (218-302) and just popup js (99-154)-->
-                    <div class="product-wrapper">
-                        <div class="project_wrap">
-                            <div class="  shadow"></div>
-                            <div class="project">
-                                <div class="headers">
-                                    <div class="title">Product Variation</div>
-                                    <div class="icons">
-                                        <span class=" close_btn">
-                                            <ion-icon name="close-outline" class="i"></ion-icon>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="container">
-                                    <div class="product-model">
-                                        <img id="image1"
-                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer;"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
-                                            alt="" srcset="">
-                                        <img id="image2" onclick="showImageTwo()"
-                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
-                                            alt="" srcset="">
-                                        <img id="image3" onclick="showImageThree()"
-                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
-                                            alt="" srcset="">
-                                        <img id="image4" onclick="showImageFour()"
-                                            style="border-radius: .64rem; width: 100%; height: 80%; cursor: pointer; display: none;"
-                                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
-                                            alt="" srcset="">
-                                        <!-- js lines(116-139) -->
-                                        <div class="more-product-collect">
-                                            <img onclick="showImageOne()"
-                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
-                                                alt="" srcset="">
-                                            <img onclick="showImageTwo()"
-                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
-                                                alt="" srcset="">
-                                            <img onclick="showImageThree()"
-                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
-                                                alt="" srcset="">
-                                            <img onclick="showImageFour()"
-                                                style="border-radius: .30rem; width: 60px; height: 60px; cursor: pointer;"
-                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
-                                                alt="" srcset="">
-                                        </div>
-                                    </div>
-                                    <div class="product-details">
-                                        <p style="font-size: 1.1rem; font-weight: 600;">Stir-fried noodls</p>
-                                        <p style="font-size: .95rem; font-weight: 600; padding: .35rem 0rem;">$31.0</p>
-                                        <div
-                                            style="display: flex; gap:2.9rem; align-items: center; font-size: .95rem; font-weight: 500;">
-                                            <p>Color:</p>
-                                            <div style="display: flex; gap:1rem; align-items: center;">
-                                                <p
-                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
-                                                    white</p>
-                                                <p
-                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
-                                                    Black</p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; gap:3.6rem; align-items: center; font-size: .95rem; font-weight: 500; padding: .75rem 0rem;">
-                                            <p>Size:</p>
-                                            <div style="display: flex; gap:1rem; align-items: center;">
-                                                <p
-                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
-                                                    S</p>
-                                                <p
-                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
-                                                    M</p>
-                                                <p
-                                                    style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
-                                                    L</p>
-                                            </div>
-                                        </div>
-                                        <div
-                                            style="display: flex; gap:2.9rem; align-items: center; font-size: .95rem; font-weight: 500; padding: .15rem 0rem;">
-                                            <p>Quantity:</p>
-                                            <div class="choose-content" id="chooseContent">
-                                                <button class="select-number" style="background-color: #F8F8F8;"><span
-                                                        style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span>2</span><span
-                                                        style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
-                                            </div>
-                                        </div>
-                                        <button onclick="addToCart(this)" id="addToCart"
-                                            class="add-to-cart-btn"><span>Add
-                                                To Cart</span><span class="plus-icon">+</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end popup -->
                 </div>
                 <!-- item content end -->
 
