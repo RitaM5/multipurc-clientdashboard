@@ -172,9 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
 //  FOOD ITEM CARD
 
 function addToCart() {
-	var wrappers = document.querySelector(".product-wrapper");
-			wrappers.classList.remove("active");
-
 			const toastContainer = document.getElementById('toast-container');
 			const toastElement = document.createElement('div');
 			toastElement.classList.add('toast');
@@ -189,46 +186,24 @@ function addToCart() {
 
 }
 
-// order place popup 
-var wrappers = document.querySelector(".product-wrappers");
-var close_btns = document.querySelectorAll(".close_btn");
+// --------selects walking customer--------
+document.addEventListener('DOMContentLoaded', function () {
+    let optionMenus = document.querySelector('.walking_customer');
+    let selectedBtn = optionMenus.querySelector('.select-btn');
+    let optionsData = optionMenus.querySelectorAll('.customer_options .option');
+    let Btn_text = optionMenus.querySelector('.sBtn-text');
 
-function showOrderPopup() {
-	wrappers.classList.add("active");
-}
-close_btns.forEach(function (btn) {
-	btn.addEventListener("click", function () {
-		wrappers.classList.remove("active");
-	});
+    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
+
+    optionsData.forEach(option => {
+        option.addEventListener('click', () => {
+            let selectedOption = option.querySelector('.option-text').innerText;
+            Btn_text.value = selectedOption;
+            optionMenus.classList.remove('active');
+        });
+    });
 });
-function printInvoice() {
-	var wrappers = document.querySelector(".product-wrappers");
-
-			const toastContainer = document.getElementById('toast-container');
-			const toastElement = document.createElement('div');
-			toastElement.classList.add('toast');
-			toastElement.innerText = 'Place Order Successfully !';
-			toastContainer.appendChild(toastElement);
-			toastContainer.style.display = 'block';
-		
-			setTimeout(() => {
-				toastContainer.style.display = 'none';
-				toastContainer.removeChild(toastElement);
-			}, 3000); 
-
-			wrappers.classList.remove("active");
-        const element = document.getElementById('invoiceContent');
-        const options = {
-            margin: 10,
-            filename: 'invoice.pdf',
-            image: { type: 'jpeg', quality: 0.98 },
-            html2canvas: { scale: 2 },
-            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-
-        html2pdf(element, options);
-
-}
+// --------end selects walking customer--------
 // -----------End Pos System------------
 
 // ---------------Add New Product----------------

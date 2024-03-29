@@ -249,7 +249,7 @@ li {
 #sidebar .side-menu>li>a {
    transition: all 0.3s;
 }
-/* #sidebar .side-menu>li>a.active, */
+#sidebar .side-menu>li>a.active,
 #sidebar .side-menu>li>a:hover {
     background-color: var(--light);
     color: #373434;
@@ -271,7 +271,7 @@ li {
 #sidebar .side-dropdown.show {
     max-height: 1000px;
 }
-
+#sidebar .side-dropdown a.active,
 #sidebar .side-dropdown a:hover {
     color: #373434;
     background-color: var(--light);
