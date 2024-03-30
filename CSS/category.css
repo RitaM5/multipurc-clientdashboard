@@ -28,11 +28,8 @@
     --border-clr: #d1dce3;
     --icon-clr: #c2c8df;
     --sz: 10vmin;
-    /* size */
     --on: #269fe5;
-    /* color on */
     --of: #616774;
-    /* color off */
     --tr: all 0.25s ease 0s;
 }
 
@@ -183,9 +180,9 @@ li {
  .toggle {
     position : relative ;
     display : inline-block;
-    width : 110px;
-    height : 45px;
-    background: linear-gradient(135deg, #FC016C, #FD016A, #D8019C, #C501B7, #9E00EB);
+    width : 76px;
+    height : 34px;
+    background: #1B434D;
     border-radius: 30px;
     border: 2px solid gray;
 }
@@ -193,8 +190,8 @@ li {
 .toggle:after {
     content: '';
     position: absolute;
-    width: 45px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     background-color: #fff;
     left: 1px;
@@ -202,7 +199,7 @@ li {
 }
        
 .checkbox:checked + .toggle::after {
-    left : 62px; 
+    left : 42px; 
 }
 
 .checkbox:checked + .toggle {
@@ -299,22 +296,6 @@ li {
     }
 }
 
-/* @media screen and (min-width: 270px) and (max-width: 300px) {
-    .toggle-content {
-        flex-direction: column;
-        gap: 0rem;
-    }
-
-    .toggle-content .yearly {
-        position: relative;
-        top: 40px;
-    }
-
-    .toggle-content .monthly {
-        position: relative;
-        bottom: 40px;
-    }
-} */
 
 
 

@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // --------end selects brand--------
 
-//  FOOD ITEM CARD
+//  cloths card add to cart toast
 
 function addToCart() {
 			const toastContainer = document.getElementById('toast-container');
