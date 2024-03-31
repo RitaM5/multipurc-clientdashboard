@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #F1F0F6;
+    --dark-grey: #8D8D8D;
+    --light: #fff;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #1775F1;
+    --light-blue: #D0E4FF;
+    --dark-blue: #0C5FCD;
+    --red: #FC3B56;
+    --darkGreen: #051013;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.allStaff-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search_content {
+    width: 100%;
+}
+
+.search_content form {
+    width: 100%;
+    margin-right: auto;
+}
+
+.search_content .form-group {
+    position: relative;
+}
+
+.search_content .form-group input {
+    width: 100%;
+    background: var(--grey);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    padding: 11px 36px 11px 16px;
+    transition: all .3s ease;
+}
+
+.search_content .form-group input:focus {
+    box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+}
+
+.search_content .form-group .icon {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+}
+
+.allStaff-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.single-staff {
+    background-color: #F3F3F3;
+    border-radius: .75rem;
+    width: 100%;
+}
+
+.staff_Profile_content {
+    background-color: #ECECEC;
+    padding: 1.5rem 1rem;
+    border-radius: .75rem .75rem 0rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.staff_profile {
+    width: 80px;
+    height: 80px;
+}
+
+.staff_body_content {
+    padding: 1.5em 1rem;
+    width: 100%;
+}
+
+.action_content {
+    display: flex;
+    justify-content: space-between;
+    gap: .50rem;
+    padding-top: 1.2rem;
+}
+
+.action_content .trash {
+    width: 85px;
+}
+
+.action_content .edit {
+    width: 85px;
+}
+
+.action_content .change-pass {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.action_content button {
+    border: none;
+    outline: none;
+    border-radius: .20rem;
+    cursor: pointer;
+    padding: .50rem 1rem;
+    width: 100%;
+}
+
+.allStaff_footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+
+.allStaff_footer button {
+    width: 125px;
+    height: 40px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ------Responsive------ */
+
+@media screen and (min-width:272px) and (max-width:576px) {
+
+    .allStaff-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .allStaff-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media screen and (min-width:272px) and (max-width:443px) {
+
+    .allStaff_footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .allStaff_footer button {
+        width: 100%;
+    }
+
+    .allStaff-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .action_content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .65em;
+        width: 100%;
+    }
+
+    .action_content .trash {
+        width: 100%;
+    }
+
+    .action_content .edit {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:1125px) {
+
+    .allStaff-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: .75rem;
+    }
+
+    .action_content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .65em;
+        width: 100%;
+    }
+
+    .action_content .trash {
+        width: 100%;
+    }
+
+    .action_content .edit {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1126px) and (max-width:1492px) {
+
+    .allStaff-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: .75rem;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width:999px) {
+    .search_content form {
+        display: block;
+    }
+}
