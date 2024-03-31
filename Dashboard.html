@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./CSS/posSystem.css">
     <link rel="stylesheet" href="./CSS/addNew.css">
     <link rel="stylesheet" href="./CSS/allStaf.css">
+    <link rel="stylesheet" href="./CSS/addNewStaff.css">
+    <link rel="stylesheet" href="./CSS/updateStaff.css">
     <link rel="stylesheet" href="./CSS/Dashboard.css">
 
 </head>
@@ -397,7 +399,7 @@
         <!-- NAVBAR -->
         <!-- main content -->
         <!-- dashboard css lines(520-604) & js lines(97-127)-->
-        <div id="userLevel2-dashboard" style="padding: 3rem 0rem; display: none;">
+        <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
             <div>
                 <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
                 <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
@@ -1212,7 +1214,7 @@
         <!-- end pos system -->
 
         <!-- Staff role manage 1) All staff css file(allStaff.css) and js file(StaffRole.js)-->
-        <div id="allStaff" style="position: relative; padding: 3rem 0rem;">
+        <div id="allStaff" style="position: relative; padding: 1.2rem 0rem; display: none;">
             <div class="allStaff-container" style="padding: 1.8rem 0rem;">
                 <div style="width: 100%;">
                     <p style="font-size: 1.3rem; font-weight: 600;"><span style="color:#ED5F0F ;">68</span> Employee</p>
@@ -1236,6 +1238,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1255,7 +1258,39 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
+                                        class="fas fa-edit" style="color: #fff;"></i></button>
+                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                    Password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-staff">
+                    <div class="staff_Profile_content">
+                        <div>
+                            <div class="staff_profile">
+                                <span class="badge"></span>
+                                <img style="width: 100%; height: 100%; border-radius: 100%;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
+                                    alt="" srcset="">
+                            </div>
+                            <p style="font-size: 1.1rem; font-weight: 600; padding: .45rem 0rem;">Najmul Hasan</p>
+                        </div>
+                        <p style="font-weight: 600; padding: .20rem;">ID: 1234</p>
+                    </div>
+                    <div class="staff_body_content">
+                        <div
+                            style="font-weight: 600; font-size: 1rem; display: flex; flex-direction: column; gap: .25rem;">
+                            <p>Role</p>
+                            <p style="color: #909090;">Super Admin</p>
+                        </div>
+                        <div style="padding: 1.1rem 0rem;">
+                            <p style="font-weight: 600; font-size: 1rem;">Action</p>
+                            <div class="action_content">
+                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
+                                        style="color: #fff;"></i></button>
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1267,6 +1302,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1286,7 +1322,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1298,6 +1334,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1317,7 +1354,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1329,6 +1366,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1348,38 +1386,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
-                                        style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
-                                    Password</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-staff">
-                    <div class="staff_Profile_content">
-                        <div>
-                            <div class="staff_profile">
-                                <img style="width: 100%; height: 100%; border-radius: 100%;"
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
-                                    alt="" srcset="">
-                            </div>
-                            <p style="font-size: 1.1rem; font-weight: 600; padding: .45rem 0rem;">Najmul Hasan</p>
-                        </div>
-                        <p style="font-weight: 600; padding: .20rem;">ID: 1234</p>
-                    </div>
-                    <div class="staff_body_content">
-                        <div
-                            style="font-weight: 600; font-size: 1rem; display: flex; flex-direction: column; gap: .25rem;">
-                            <p>Role</p>
-                            <p style="color: #909090;">Super Admin</p>
-                        </div>
-                        <div style="padding: 1.1rem 0rem;">
-                            <p style="font-weight: 600; font-size: 1rem;">Action</p>
-                            <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
-                                <button class="edit"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit"><i class="fas fa-edit"
                                         style="color: #fff; background-color: #2BD08B;"></i></button>
                                 <button class="change-pass" style="color: #fff; background-color: #2562D8; ">Change
                                     Password</button>
@@ -1391,6 +1398,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1410,7 +1418,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1422,6 +1430,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1441,7 +1450,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1453,6 +1462,7 @@
                     <div class="staff_Profile_content">
                         <div>
                             <div class="staff_profile">
+                                <span class="badge"></span>
                                 <img style="width: 100%; height: 100%; border-radius: 100%;"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3RQ0JXlO1MeQtFFLUGMvKXfm8cdmqWlBOYr9nzOAMf5X6RrKs1svKgBLsSQ&s"
                                     alt="" srcset="">
@@ -1472,7 +1482,7 @@
                             <div class="action_content">
                                 <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
                                         style="color: #fff;"></i></button>
-                                <button class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i class="fas fa-edit"
                                         style="color: #fff;"></i></button>
                                 <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
@@ -1482,14 +1492,115 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: end; padding: 2rem 0rem; width: 100%;">
-               <div class="allStaff_footer">
-                <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
-                <a href="#"><button style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
-               </div>
+                <div class="allStaff_footer">
+                    <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
+                    <a href="#"><button
+                            style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
+                </div>
             </div>
         </div>
 
+        <!-- signle staff edited content css file(updateStaff.css) and js file(StaffRole.js)-->
+        <div id="singleStaff-edit" style=" padding: 3rem 0rem; display: none;">
+            <p style="font-size: 1.3rem; font-weight: 600;">Edit Admin</p>
+            <div class="image-change-content">
+                <div class="selected-img">
+                    <img src="./img/profile.png" id="-change-profile-pic" alt="" srcset="">
+                </div>
+                <div>
+                    <div class="change_files-text">
+                        <div>
+                            <label style="display: flex; justify-content: center; align-items: center;" for="input-file"><span>Change Image</span></label>
+                            <input type="file" id="change-input-file" accept="image/jpeg, image/png, image/jpg">
+                        </div>
+                        <a href="#" style="color: #0C5FCD; font-size: 1.1rem; font-weight: 500;">Clear select image</a>
+                    </div>
+                    <p style="font-size: 1rem; font-weight: 500; color: #9D9D9D; padding: .40rem 0rem;">allowed image format: jpg,jpeg,png</p>
+                </div>
+            </div>
+            <div class="updateInput-container" style="padding: .50rem 0rem;">
+                <div class="leftUpdateInput-content">
+                    <div class="updateName-container">
+                        <label>Name</label></br>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="updateMobile-container">
+                        <label>Mobile</label></br>
+                        <input type="phone" placeholder="" />
+                    </div>
+                </div>
+                <div class="rightUpdateInput-content">
+                    <div class="updateEmail-container">
+                        <label>Email</label></br>
+                        <input type="email" placeholder="" />
+                    </div>
+                    <div class="updateRole-container">
+                        <label>Role</label></br>
+                        <input type="phone" placeholder="" />
+                    </div>
+                </div>
+            </div>
+            <a href="#"><button>Update</button></a>
+        </div>
+        <!-- end single staff edited content -->
+
         <!-- end All staff -->
+
+        <!-- Staff role manage 2) Add New Staff css file(addNewStaff.css) and js file(StaffRole.js)-->
+        <div id="addNewStaff" style="position: relative; padding: 3rem 0rem; display: none;">
+            <p style="font-size: 1.3rem; font-weight: 600;">Add new employee</p>
+            <div class="image-upload-content">
+                <div class="selected-img">
+                    <img src="./img/profile.png" id="profile-pic" alt="" srcset="">
+                </div>
+                <div>
+                    <div class="upload_files">
+                        <div>
+                            <label style="display: flex; justify-content: center; align-items: center;" for="input-file"><span>Upload Avatar</span></label>
+                            <input type="file" id="input-file" accept="image/jpeg, image/png, image/jpg">
+                        </div>
+                        <a href="#" style="color: #0C5FCD; font-size: 1.1rem; font-weight: 500;">Clear select image</a>
+                    </div>
+                    <p style="font-size: 1rem; font-weight: 500; color: #9D9D9D; padding: .40rem 0rem;">allowed image format: jpg,jpeg,png</p>
+                </div>
+            </div>
+            <div class="dataInput-container" style="padding: .60rem 0rem;">
+                <div class="leftInput-content">
+                    <div class="name-container">
+                        <label>Name</label></br>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="mobile-container">
+                        <label>Mobile</label></br>
+                        <input type="phone" placeholder="" />
+                    </div>
+                    <div class="password-container">
+                        <label>Password</label></br>
+                        <input type="password" placeholder="" />
+                    </div>
+                    <div class="role-container">
+                        <label>Role</label></br>
+                        <input type="phone" placeholder="" />
+                    </div>
+                </div>
+                <div class="rightInput-content">
+                    <div class="username-container">
+                        <label>Username</label></br>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="email-container">
+                        <label>Email</label></br>
+                        <input type="email" placeholder="" />
+                    </div>
+                    <div class="confirmPassword-container">
+                        <label>Confirm Password</label></br>
+                        <input type="password" placeholder="" />
+                    </div>
+                </div>
+            </div>
+            <a href="#"><button>Add New Staff</button></a>
+        </div>
+        <!-- end add new staff -->
 
         <!-- add new product css file(addnew.css) and js(clientDashboard.js) by rita -->
         <div id="addNewProduct" style="display: none;">

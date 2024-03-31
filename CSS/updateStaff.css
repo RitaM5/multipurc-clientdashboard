@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #F1F0F6;
+    --dark-grey: #8D8D8D;
+    --light: #fff;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #1775F1;
+    --light-blue: #D0E4FF;
+    --dark-blue: #0C5FCD;
+    --red: #FC3B56;
+    --darkGreen: #051013;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.updateInput-container{
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+}
+
+.leftUpdateInput-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.rightUpdateInput-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.updateName-container label,
+.updateEmail-container label,
+.updateMobile-container label,
+.updateRole-container label{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.updateName-container input,
+.updateEmail-container input,
+.updateMobile-container input,
+.updateRole-container input {
+    width: 100%;
+    max-width: 600px;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+}
+
+#singleStaff-edit button{
+    background-color: #1B434D;
+     border: none; 
+     outline: none; 
+     color: #fff;
+     width: 120px;
+     height: 40px;
+     border-radius: 2rem;
+     font-size: 1rem;
+     font-weight: 500;
+     cursor: pointer;
+     margin: 2rem 0rem;
+}
+
+.image-change-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 0rem;
+}
+
+.selected-img {
+    width: 160px;
+    height: 160px;
+}
+
+.selected-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.change_files-text{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.image-change-content label {
+    display: block;
+    width: 170px;
+    background-color: #1B434D;
+    color: #fff;
+    padding: 10px;
+    border-radius: .30rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.image-change-content input{
+    display: none;
+}
+
+/* -----Responsive----- */
+
+@media screen and (min-width:272px) and (max-width:577px){
+    .updateInput-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.6rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:1180px){
+    .updateInput-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+    }
+}
+@media screen and (min-width:272px) and (max-width:650px) {
+    .image-change-content {
+        display:grid;     
+    }
+    .change_files-text{
+        display: grid;
+    }
+}

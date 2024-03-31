@@ -83,24 +83,48 @@ function showLevel2Dashboard() {
 	document.getElementById('userLevel2-posSystem').style.display = 'none';
     document.getElementById('addNewProduct').style.display = 'none';
     document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
 }
 function showPosSystem() {
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
 	document.getElementById('userLevel2-posSystem').style.display = 'block';
     document.getElementById('addNewProduct').style.display = 'none';
     document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
 }
 function addNewProduct(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
 	document.getElementById('userLevel2-posSystem').style.display = 'none';
 	document.getElementById('addNewProduct').style.display = 'block';
     document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
 }
 function showAllStaff(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
 	document.getElementById('userLevel2-posSystem').style.display = 'none';
 	document.getElementById('addNewProduct').style.display = 'none';
     document.getElementById('allStaff').style.display = 'block';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+}
+function addNewStaff(){
+	document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'block';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+}
+function clickEditOne(){
+    document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'block';
 }
 // ---------Dashboard Content----------
 
