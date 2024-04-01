@@ -40,6 +40,10 @@ li {
     list-style: none;
 }
 
+#allStaff{
+    padding: 1.2rem 1.2rem; 
+}
+
 .allStaff-container {
     display: flex;
     justify-content: space-between;
@@ -104,14 +108,12 @@ li {
 }
 
 .staff_profile {
-    width: 80px;
-    height: 80px;
     position: relative;
 }
 .staff_profile .badge {
     position: absolute;
     top: 5px;
-    right: 3px;
+    right: 26px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -223,7 +225,7 @@ li {
     }
 }
 
-@media screen and (min-width:577px) and (max-width:1125px) {
+@media screen and (min-width:577px) and (max-width:1150px) {
 
     .allStaff-content {
         grid-template-columns: repeat(2, 1fr);
@@ -257,5 +259,8 @@ li {
 @media screen and (min-width:272px) and (max-width:999px) {
     .search_content form {
         display: block;
+    }
+    #allStaff{
+        padding: 1.2rem 0rem; 
     }
 }
