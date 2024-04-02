@@ -2,12 +2,15 @@
 
 // image upload
 
-let profilePic = document.getElementById('profile-pic');
-let inputFile = document.getElementById('input-file');
+document.addEventListener('DOMContentLoaded', function() {
+    let profilePic = document.getElementById('profile-picture');
+    let inputFile = document.getElementById('input-files');
+    
+    inputFile.onchange = function () {
+        profilePic.src = URL.createObjectURL(inputFile.files[0]);
+    }
+});
 
-inputFile.onchange = function () {
-    profilePic.src = URL.createObjectURL(inputFile.files[0]);
-}
 // end image upload
 
 // role select
@@ -34,13 +37,15 @@ roleLinkData.forEach(option => {
 // --------edit Staff-------------
 
 // image change
+document.addEventListener('DOMContentLoaded', function() {
+    let changeProfilePic = document.getElementById('profile-pic');
+    let changeInputFile = document.getElementById('input-file');
+    
+    changeInputFile.onchange = function () {
+        changeProfilePic.src = URL.createObjectURL(changeInputFile.files[0]);
+    }
+});
 
-let changeProfilePic = document.getElementById('profile-pic');
-let changeInputFile = document.getElementById('input-file');
-
-changeInputFile.onchange = function () {
-    changeProfilePic.src = URL.createObjectURL(inputFile.files[0]);
-}
 // end image change
 
 //edit role select

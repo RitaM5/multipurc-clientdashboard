@@ -560,7 +560,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: .20rem;
+    padding-top: .26rem;
 }
 
 .index-content .change-number {
@@ -579,6 +579,105 @@ li {
     border: none;
     outline: none;
 }
+
+/* percentage */
+
+.percentage-box {
+    width: 100%;
+    margin: 1.5rem 0rem;
+}
+
+.search_box_content {
+    position: relative;
+    height: 3rem;
+    max-width: 380px;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.25);
+    border-radius: 25px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.percentage-select {
+    position: relative;
+} 
+.percentage-select .select-btn i {
+    font-size: 20px;
+    position: absolute;
+    right: .15rem;
+    top: 1.2rem;
+    font-size: 14px;
+}
+
+.percentage_options {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    background: var(--light);
+    padding: 10px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    width: 200px;
+    margin-top: .45rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.percentage_options.show {
+    opacity: 1;
+    pointer-events: visible;
+    top: 100%;
+}
+
+.percentage_options a {
+    padding: 10px 16px;
+    display: flex;
+    grid-gap: 15px;
+    font-size: 14px;
+    color: var(--dark);
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.percentage_options a:hover {
+    background: var(--grey);
+}
+
+.search_box_content input {
+    height: 100%;
+    border-radius: 25px;
+    padding: 0px 14px;
+    border: none;
+    outline: none;
+    font-size: .95rem;
+    height: 3rem;
+    width: 100%;
+}
+
+.percent-divider {
+    display: inline-block;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(179, 176, 176);
+}
+
+.search_box_content .box_icon_text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    background-color: #000000;
+    height: 100%;
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+
+/* end percantage */
 
 .payment-summery {
     width: 100%;
@@ -599,7 +698,7 @@ li {
     padding-top: 2.2rem;
 }
 
-.payment-system-content button{
+.payment-system-content button {
     background-color: #DBFFD6;
     padding: .30rem 2rem;
     height: 2.2rem;
@@ -613,19 +712,19 @@ li {
     cursor: pointer;
 }
 
-.cancel-order-content{
+.cancel-order-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 1.2rem;
 }
 
-.cancel-order-content button{
+.cancel-order-content button {
     padding: .30rem 2rem;
     height: 2.2rem;
     border-radius: 3rem;
     width: 100%;
-    min-width: 146px;
+    min-width: 154px;
     border: none;
     outline: none;
     border: 2px solid rgb(163, 159, 159);
@@ -731,7 +830,8 @@ li {
     .cloths-content {
         grid-template-columns: repeat(3, 1fr);
     }
-    .payment-system-content{
+
+    .payment-system-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: .56rem;
@@ -739,13 +839,14 @@ li {
 }
 
 @media screen and (min-width:446px) and (max-width: 1060px) {
-    .payment-system-content{
-        display:flex;
+    .payment-system-content {
+        display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
     }
-    .cancel-order-content{
+
+    .cancel-order-content {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -754,17 +855,27 @@ li {
 }
 
 @media screen and (min-width:272px) and (max-width: 445px) {
-    .payment-system-content{
+
+    .search_box_content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .35rem;
+
+    }
+
+    .payment-system-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: .56rem;
     }
-    .cancel-order-content{
+
+    .cancel-order-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: .56rem;
     }
-    .payment-system-content button{
+
+    .payment-system-content button {
         height: 100%;
         font-size: .95rem;
     }

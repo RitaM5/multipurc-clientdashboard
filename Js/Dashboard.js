@@ -206,6 +206,28 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // --------end selects brand--------
 
+// --------selects percentage--------
+document.addEventListener('DOMContentLoaded', function () {
+    let percentOptionMenus = document.querySelector('.percentage-select');
+    const dropdownPercentOptions = percentOptionMenus.querySelector('.percentage_options');
+    let percentOptionsData = percentOptionMenus.querySelectorAll('.percentage_options .option');
+    let percentBtn_text = percentOptionMenus.querySelector('.sBtn-text');
+
+
+    percentOptionMenus.addEventListener('click', function () {
+        dropdownPercentOptions.classList.toggle('show');
+    })
+
+    percentOptionsData.forEach(option => {
+        option.addEventListener('click', () => {
+            let percentSelectedOption = option.querySelector('.option-text').innerText;
+            percentBtn_text.value = percentSelectedOption;
+            percentOptionMenus.classList.remove('active');
+        });
+    });
+});
+// --------end selects percentage-------
+
 // for pos system cloths card add to cart popup
 var wrapper = document.querySelector(".product-wrapper");
 var close_btns = document.querySelectorAll(".close_btn");
