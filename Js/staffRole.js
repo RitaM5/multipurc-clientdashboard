@@ -46,7 +46,6 @@ changeInputFile.onchange = function () {
 //edit role select
 const editRoleContainer = document.querySelector('.edit-selects-role');
 const dropdownEditRole = editRoleContainer.querySelector('.edit-role-link');
-let editSelectedBtn = editRoleContainer.querySelector('.select-btn');
 let editRoleLinkData = editRoleContainer.querySelectorAll('.edit-role-link .option');
 let edtRole_item = editRoleContainer.querySelector('.role-item');
 

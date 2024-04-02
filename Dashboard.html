@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <!-- this pages css file(clientDashboard.css) and js file(clientDashboard.js) by Rita-->
+    <!-- this pages css file(Dashboard.css) and js file(Dashboard.js) by Rita-->
     <!-- SIDEBAR css lines(45-274)-->
     <section id="sidebar">
         <!-- css lines(82-92) -->
@@ -59,7 +59,7 @@
                             transform="translate(-176.307 785.231)" fill="#4e5767"></path>
                     </svg>
                 </span>
-                <input class="form-control" type="text" name="" placeholder="Search menu" id="menu-search">
+                <input style="color: #fff;" class="form-control" type="text" name="" placeholder="Search menu" id="menu-search">
 
             </div>
         </div>
@@ -714,18 +714,13 @@
                         <!-- selects category css lines(95-154) & js lines(135-150)-->
                         <div class="selects_category">
                             <div class="select-btn">
-                                <input type="text" class="sBtn-text" name="category" list="categories" placeholder="">
+                                <input type="text" class="sBtn-text" name="category" list="categories" placeholder="Select Category">
                                 <i class="bx bx-chevron-down"></i>
                             </div>
                             <ul class="category_options">
-                                <li class="option">
-                                    <span class="option-text">Symphony Z20</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Sony Experia</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Xiaomi redmi 13c</span>
+                                <li class="option"><a href="#"><span class="option-text">Symphony Z20</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Sony Experia</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Xiaomi Redmi 13C</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -733,33 +728,26 @@
                         <!-- selects brand css lines(157-217) & js lines(154-170)-->
                         <div class="selects_brand">
                             <div class="select-btn">
-                                <input type="text" class="sBtn-text" name="category" list="categories" placeholder="">
+                                <input type="text" class="sBtn-text" name="category" list="categories" placeholder="Select Brand">
                                 <i class="bx bx-chevron-down"></i>
                             </div>
                             <ul class="brand_category_options">
-                                <li class="option">
-                                    <span class="option-text">Symphony Z20</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Sony Experia</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Xiaomi redmi 13c</span>
+                                <li class="option"><a href="#"><span class="option-text">Symphony Z20</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Sony Experia</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Xiaomi Redmi 13C</span></a>
                                 </li>
                             </ul>
                         </div>
                         <!-- end selects brand -->
                     </div>
                     <!-- end header info -->
-
                     <div class="menu-items" style="width: 100%;">
                         <!--cloths items card css lines(222-288)-->
                         <div class="cloths-content">
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
                                     <!-- js lines(103-113) -->
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/yellow-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -777,14 +765,13 @@
                                 </div>
                                 <!-- add to cart js lines(174-187)-->
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/whitw-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -801,14 +788,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/red-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -825,14 +811,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/of-white-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -849,14 +834,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/of-white-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -873,14 +857,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/red-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -897,14 +880,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/whitw-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -921,14 +903,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/yellow-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -945,14 +926,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/yellow-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -969,14 +949,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/whitw-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -993,14 +972,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/red-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1017,14 +995,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/of-white-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1041,14 +1018,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/of-white-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1065,14 +1041,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/red-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1089,14 +1064,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/whitw-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1113,14 +1087,13 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
-                                    <img onclick="showPopupContent()"
-                                        style="border-radius: .74rem; width: 100%; height: 100%;"
+                                    <img style="border-radius: .74rem; width: 100%; height: 100%;"
                                         src="./img/yellow-removebg-preview.png" alt="" srcset="">
                                 </div>
                                 <div style="padding: 1rem 0rem;">
@@ -1137,7 +1110,7 @@
                                         style="font-size: 1.2rem; color: #F01212; font-weight: 500; text-decoration: line-through;">$60.00</span>
                                 </div>
                                 <div style="width: 100%;">
-                                    <button id="addToCart" onclick="addToCart()"><span>Add To Cart</span><span
+                                    <button id="addToCart" onclick="showPopupContent()"><span>Add To Cart</span><span
                                             class="plus-icon" style="color: #fff;">+</span></button>
                                 </div>
                             </div>
@@ -1159,20 +1132,121 @@
                                 <i class="bx bx-chevron-down"></i>
                             </div>
                             <ul class="customer_options">
-                                <li class="option">
-                                    <span class="option-text">Symphony Z20</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Sony Experia</span>
-                                </li>
-                                <li class="option">
-                                    <span class="option-text">Xiaomi redmi 13c</span>
+                                <li class="option"><a href="#"><span class="option-text">Symphony Z20</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Sony Experia</span></a></li>
+                                <li class="option"><a href="#"><span class="option-text">Xiaomi Redmi 13C</span></a>
                                 </li>
                             </ul>
                         </div>
                         <!-- end walking customer -->
                         <button class="add_btn">Add</button>
                     </div>
+
+                    <div style="padding: .85rem 0rem;">
+                        <p style="font-weight: 600; font-size: 1.1rem; padding-top: 1rem;">Total Item <span
+                            style="color: #BCBDBD; font-weight: 600;">(4)</span></p>
+                    <!--select cart item css lines(395-415)-->
+                    <div class="select-cart-content">
+                        <div class="select-cart-item">
+                            <div class="single-cart-item">
+                                <img style="border-radius: .24rem; width: 110px; height: 110px;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                    alt="" srcset="">
+                                <div style="display: flex; flex-direction: column; gap: .30rem; width: 100%;">
+                                    <p style="font-weight: 600; font-size: 1rem;">Fried wonton</p>
+                                    <div style="font-weight: 500; font-size: .95rem; display: flex; gap: .20rem; align-items: center;">
+                                        <span>White</span><span style="font-size: .80rem;">|</span><span>M</span>
+                                    </div>
+                                    <span style="font-weight: 600; font-size: .95rem;">$60.00</span>
+                                    <div class="index-container">
+                                        <div class="index-content" id="indexContent">
+                                            <button class="change-number" style="background-color: #F8F8F8;"><span
+                                                  class="change-decrease"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span class="change-value">0</span><span
+                                                  class="change-increase"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-trash-alt" style="color: red; cursor: pointer;"></i>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="select-cart-item">
+                            <div class="single-cart-item">
+                                <img style="border-radius: .24rem; width: 110px; height: 110px;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                    alt="" srcset="">
+                                <div style="display: flex; flex-direction: column; gap: .30rem; width: 100%;">
+                                    <p style="font-weight: 600; font-size: 1rem;">Fried wonton</p>
+                                    <div style="font-weight: 500; font-size: .95rem; display: flex; gap: .20rem; align-items: center;">
+                                        <span>White</span><span style="font-size: .80rem;">|</span><span>M</span>
+                                    </div>
+                                    <span style="font-weight: 600; font-size: .95rem;">$60.00</span>
+                                    <div class="index-container">
+                                        <div class="index-content" id="indexContent">
+                                            <button class="change-number" style="background-color: #F8F8F8;"><span
+                                                  class="change-decrease"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span class="change-value">0</span><span
+                                                  class="change-increase"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-trash-alt" style="color: red; cursor: pointer;"></i>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="select-cart-item">
+                            <div class="single-cart-item">
+                                <img style="border-radius: .24rem; width: 110px; height: 110px;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                    alt="" srcset="">
+                                <div style="display: flex; flex-direction: column; gap: .30rem; width: 100%;">
+                                    <p style="font-weight: 600; font-size: 1rem;">Fried wonton</p>
+                                    <div style="font-weight: 500; font-size: .95rem; display: flex; gap: .20rem; align-items: center;">
+                                        <span>White</span><span style="font-size: .80rem;">|</span><span>M</span>
+                                    </div>
+                                    <span style="font-weight: 600; font-size: .95rem;">$60.00</span>
+                                    <div class="index-container">
+                                        <div class="index-content" id="indexContent">
+                                            <button class="change-number" style="background-color: #F8F8F8;"><span
+                                                  class="change-decrease"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span class="change-value">0</span><span
+                                                  class="change-increase"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-trash-alt" style="color: red; cursor: pointer;"></i>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="select-cart-item">
+                            <div class="single-cart-item">
+                                <img style="border-radius: .24rem; width: 110px; height: 110px;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                    alt="" srcset="">
+                                <div style="display: flex; flex-direction: column; gap: .30rem; width: 100%;">
+                                    <p style="font-weight: 600; font-size: 1rem;">Fried wonton</p>
+                                    <div style="font-weight: 500; font-size: .95rem; display: flex; gap: .20rem; align-items: center;">
+                                        <span>White</span><span style="font-size: .80rem;">|</span><span>M</span>
+                                    </div>
+                                    <span style="font-weight: 600; font-size: .95rem;">$60.00</span>
+                                    <div class="index-container">
+                                        <div class="index-content" id="indexContent">
+                                            <button class="change-number" style="background-color: #F8F8F8;"><span
+                                                  class="change-decrease"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span class="change-value">0</span><span
+                                                  class="change-increase"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                        </div>
+                                        <div>
+                                            <i class="fas fa-trash-alt" style="color: red; cursor: pointer;"></i>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>                          
+                        </div>
+                    </div>
+                    <!-- end select cart item -->
+                    </div>
+
                     <div style="padding: 1.5rem 0rem; display: flex; justify-content: center; align-items: center;">
                         <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/external-cart-love-flatart-icons-flat-flatarticons.png"
                             alt="external-cart-love-flatart-icons-flat-flatarticons" />
@@ -1199,16 +1273,122 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div
-                            style="display: flex; justify-content: space-between; align-items: center; font-size: .95rem; margin-top: .35rem; font-weight: 500;">
-                          
-                        
-                        </div> -->
+                        <div class="payment-system-content">
+                            <a href="#"><button style="width: 100%;">Cash</button></a>
+                            <a href="#"><button style="width: 100%;">Online Payment</button></a>
+                        </div>
+                        <div class="cancel-order-content">
+                            <a href="#"><button style="background-color: #F61111; width: 100%;">Cancel</button></a>
+                            <a href="#"><button style="background-color: #1B434D; width: 100%;">Order</button></a>
+                        </div>
                     </div>
                     <!-- end payment summery -->
                 </div>
                 <!-- end cart content -->
             </div>
+
+            <!-- for Add To Cart whole popup contents css (218-302) and just popup js (99-154)-->
+            <div class="product-wrapper">
+                <div class="project_wrap">
+                    <div class="  shadow"></div>
+                    <div class="project">
+                        <div class="headers">
+                            <div class="title">Product Variation</div>
+                            <div class="icons">
+                                <span class=" close_btn">
+                                    <ion-icon name="close-outline" class="i"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="product-model">
+                                <img id="image1"
+                                    style="border-radius: .64rem; width: 90%; height: 80%; cursor: pointer;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                    alt="" srcset="">
+                                <img id="image2" onclick="showImageTwo()"
+                                    style="border-radius: .64rem; width: 90%; height: 80%; cursor: pointer; display: none;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
+                                    alt="" srcset="">
+                                <img id="image3" onclick="showImageThree()"
+                                    style="border-radius: .64rem; width: 90%; height: 80%; cursor: pointer; display: none;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
+                                    alt="" srcset="">
+                                <img id="image4" onclick="showImageFour()"
+                                    style="border-radius: .64rem; width: 90%; height: 80%; cursor: pointer; display: none;"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
+                                    alt="" srcset="">
+                                <!-- js lines(116-139) -->
+                                <div class="more-product-collect">
+                                    <img onclick="showImageOne()"
+                                        style="border-radius: .30rem; width: 50px; height: 60px; cursor: pointer;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUDMhPpndCvGlsF_NF-j1olBZVn9Gg8QDerw&usqp=CAU"
+                                        alt="" srcset="">
+                                    <img onclick="showImageTwo()"
+                                        style="border-radius: .30rem; width: 5cqb; height: 60px; cursor: pointer;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDT5xvqZx3Z59CevGd_BIOAOVlkTb2bc7KQ&usqp=CAU"
+                                        alt="" srcset="">
+                                    <img onclick="showImageThree()"
+                                        style="border-radius: .30rem; width: 50px; height: 60px; cursor: pointer;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcK-SofoMWKAAKA3Cf4q8uF_JRYFMxShFMVw&usqp=CAU"
+                                        alt="" srcset="">
+                                    <img onclick="showImageFour()"
+                                        style="border-radius: .30rem; width: 50px; height: 60px; cursor: pointer;"
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHUW9GlUs0mx4T5UxSPndlPOx9RlUTqSf2_u_uWI0vt9ma6VN6M8gdrrC_QNaNztPD1og&usqp=CAU"
+                                        alt="" srcset="">
+                                </div>
+                            </div>
+                            <div class="product-details">
+                                <p style="font-size: 1.2rem; font-weight: 600;">Stir-fried noodls</p>
+                                <div style="display: flex; align-items: center; gap: 2rem; padding: .30rem 0rem;">
+                                    <p style="font-size: 1.1rem; font-weight: 600; padding: .35rem 0rem;">$31.0</p>
+                                    <p style="color: #F01212; font-size: 1rem; font-weight: 600; padding: .35rem 0rem; text-decoration: line-through;">$50.0</p>
+                                </div>
+                                <div
+                                    style="display: flex; gap:2rem; align-items: center; font-size: 1rem; font-weight: 500;">
+                                    <p>Color:</p>
+                                    <div style="display: flex; gap:1rem; align-items: center;">
+                                        <p id="white-btn"
+                                            style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
+                                            white</p>
+                                        <p id="black-btn" onclick="clickToBlack()">Black</p>
+                                    </div>
+                                </div>
+                               <div id="size-content" style="display: none;">
+                                <div
+                                style="display: flex; gap:2.8rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
+                                <p>Size:</p>
+                                <div style="display: flex; gap:1rem; align-items: center;">
+                                    <p
+                                        style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                        S</p>
+                                    <p
+                                        style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                        M</p>
+                                    <p
+                                        style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                        L</p>
+                                </div>
+                            </div>
+                               </div>
+                                <div
+                                    style="display: flex; gap:1.6rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .60rem 0rem;">
+                                    <p>Quantity:</p>
+                                    <div class="choose-content" id="chooseContent">
+                                        <button class="select-number" style="background-color: #F8F8F8;"><span
+                                              class="convert-decrease"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">-</span><span class="convert-value">0</span><span
+                                              class="convert-increase"  style="background-color: #667085; display: flex; justify-content: center; align-items: center; color: #fff; border-radius: 100%; width: 16px; height: 16px;">+</span></button>
+                                    </div>
+                                </div>
+                                <button onclick="addToCart(this)"
+                                    class="add-to-cart"><span>Add
+                                        To Cart</span><span class="plus-icon" style="color: #fff;">+</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end Add to cart popup -->
             <div id="toast-container"></div>
         </div>
         <!-- end pos system -->
@@ -1504,7 +1684,7 @@
         <div id="singleStaff-edit" style=" display: none;">
             <p style="font-size: 1.3rem; font-weight: 600;">Edit Admin</p>
             <div class="image-change-content">
-                <div class="selected-img">
+                <div class="selected-img" id="change-selected-img">
                     <img src="./img/profile.png" id="profile-pic" alt="" srcset="">
                 </div>
                 <div>
@@ -1544,9 +1724,12 @@
                                 <i class="bx bx-chevron-down"></i>
                             </div>
                             <ul class="edit-role-link">
-                                <li class="option"><a href="#"><i class="fas fa-user-shield"></i><span class="option_text">Admin</span></a></li>
-                                <li class="option"><a href="#"><i class="fas fa-user-tie"></i><span class="option_text">Client</span></a></li>
-                                <li class="option"><a href="#"><i class="fas fa-user"></i><span class="option_text">User</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user-shield"></i><span
+                                            class="option_text">Admin</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user-tie"></i><span
+                                            class="option_text">Client</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user"></i><span
+                                            class="option_text">User</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -1600,9 +1783,12 @@
                                 <i class="bx bx-chevron-down"></i>
                             </div>
                             <ul class="role-link">
-                                <li class="option"><a href="#"><i class="fas fa-user-shield"></i><span class="option_text">Admin</span></a></li>
-                                <li class="option"><a href="#"><i class="fas fa-user-tie"></i><span class="option_text">Client</span></a></li>
-                                <li class="option"><a href="#"><i class="fas fa-user"></i><span class="option_text">User</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user-shield"></i><span
+                                            class="option_text">Admin</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user-tie"></i><span
+                                            class="option_text">Client</span></a></li>
+                                <li class="option"><a href="#"><i class="fas fa-user"></i><span
+                                            class="option_text">User</span></a></li>
                             </ul>
                         </div>
                     </div>

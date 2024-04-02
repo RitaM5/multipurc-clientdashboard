@@ -305,7 +305,6 @@ li {
 
 /* NAVBAR */
 nav {
-    background: var(--light);
     height: 64px;
     padding: 0 20px;
     display: flex;

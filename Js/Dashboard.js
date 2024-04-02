@@ -166,11 +166,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // --------selects categroy--------
 document.addEventListener('DOMContentLoaded', function () {
     let optionMenus = document.querySelector('.selects_category');
-    let selectedBtn = optionMenus.querySelector('.select-btn');
+    const dropdownCategoryOptions = optionMenus.querySelector('.category_options');
     let optionsData = optionMenus.querySelectorAll('.category_options .option');
     let Btn_text = optionMenus.querySelector('.sBtn-text');
 
-    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
+    optionMenus.addEventListener('click', function () {
+        dropdownCategoryOptions.classList.toggle('show');
+    })
 
     optionsData.forEach(option => {
         option.addEventListener('click', () => {
@@ -184,22 +186,124 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // --------selects brand--------
 document.addEventListener('DOMContentLoaded', function () {
-    let optionMenus = document.querySelector('.selects_brand');
-    let selectedBtn = optionMenus.querySelector('.select-btn');
-    let optionsData = optionMenus.querySelectorAll('.brand_category_options .option');
-    let Btn_text = optionMenus.querySelector('.sBtn-text');
+    let brandOptionMenus = document.querySelector('.selects_brand');
+    const dropdownBrandOptions = brandOptionMenus.querySelector('.brand_category_options');
+    let brandOptionsData = brandOptionMenus.querySelectorAll('.brand_category_options .option');
+    let brandBtn_text = brandOptionMenus.querySelector('.sBtn-text');
 
-    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
 
-    optionsData.forEach(option => {
+    brandOptionMenus.addEventListener('click', function () {
+        dropdownBrandOptions.classList.toggle('show');
+    })
+
+    brandOptionsData.forEach(option => {
         option.addEventListener('click', () => {
-            let selectedOption = option.querySelector('.option-text').innerText;
-            Btn_text.value = selectedOption;
-            optionMenus.classList.remove('active');
+            let brandSelectedOption = option.querySelector('.option-text').innerText;
+            brandBtn_text.value = brandSelectedOption;
+            brandOptionMenus.classList.remove('active');
         });
     });
 });
 // --------end selects brand--------
+
+// for pos system cloths card add to cart popup
+var wrapper = document.querySelector(".product-wrapper");
+var close_btns = document.querySelectorAll(".close_btn");
+
+function showPopupContent(){
+	wrapper.classList.add("active");
+}
+close_btns.forEach(function (btn) {
+	btn.addEventListener("click", function () {
+		wrapper.classList.remove("active");
+	});
+});
+
+// variation image select
+function showImageOne() {
+	document.getElementById('image1').style.display = 'block';
+	document.getElementById('image2').style.display = 'none';
+	document.getElementById('image3').style.display = 'none';
+	document.getElementById('image4').style.display = 'none';
+}
+function showImageTwo() {
+	document.getElementById('image1').style.display = 'none';
+	document.getElementById('image2').style.display = 'block';
+	document.getElementById('image3').style.display = 'none';
+	document.getElementById('image4').style.display = 'none';
+}
+function showImageThree() {
+	document.getElementById('image1').style.display = 'none';
+	document.getElementById('image2').style.display = 'none';
+	document.getElementById('image3').style.display = 'block';
+	document.getElementById('image4').style.display = 'none';
+}
+function showImageFour() {
+	document.getElementById('image1').style.display = 'none';
+	document.getElementById('image2').style.display = 'none';
+	document.getElementById('image3').style.display = 'none';
+	document.getElementById('image4').style.display = 'block';
+}
+
+// popup black button click
+
+function clickToBlack(){
+    document.getElementById('size-content').style.display = 'block';
+    document.getElementById('black-btn').classList.add('active');
+}
+
+// end popup black btn click
+
+// right popup increase decrease value
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+});
+const decreaseButton = document.querySelector('.convert-decrease');
+const increaseButton = document.querySelector('.convert-increase');
+const valueElement = document.querySelector('.convert-value');
+
+decreaseButton.addEventListener('click', function() {
+    let value = parseInt(valueElement.textContent);
+    if (value > 0) {
+        value--;
+        valueElement.textContent = value;
+    }
+});
+
+increaseButton.addEventListener('click', function() {
+    let value = parseInt(valueElement.textContent);
+    value++;
+    valueElement.textContent = value;
+});
+//end popup change increase decrease value
+
+// right part change increase decrease value
+
+document.querySelectorAll('.change-decrease').forEach(decreaseButton => {
+    decreaseButton.addEventListener('click', function() {
+        let valueElement = this.closest('.index-container').querySelector('.change-value');
+        let value = parseInt(valueElement.textContent);
+        if (value > 0) {
+            value--;
+            valueElement.textContent = value;
+        }
+    });
+});
+
+document.querySelectorAll('.change-increase').forEach(increaseButton => {
+    increaseButton.addEventListener('click', function() {
+        let valueElement = this.closest('.index-container').querySelector('.change-value');
+        let value = parseInt(valueElement.textContent);
+        value++;
+        valueElement.textContent = value;
+    });
+});
+
+
+//end right part change increase decrease value
+
+// ------------------end pos system cloths card add to cart popup-------------
 
 //  cloths card add to cart toast
 
@@ -220,18 +324,20 @@ function addToCart() {
 
 // --------selects walking customer--------
 document.addEventListener('DOMContentLoaded', function () {
-    let optionMenus = document.querySelector('.walking_customer');
-    let selectedBtn = optionMenus.querySelector('.select-btn');
-    let optionsData = optionMenus.querySelectorAll('.customer_options .option');
-    let Btn_text = optionMenus.querySelector('.sBtn-text');
+    let customerOptionMenus = document.querySelector('.walking_customer');
+    const dropdownCustomerOptions = customerOptionMenus.querySelector('.customer_options');
+    let customerOptionsData = customerOptionMenus.querySelectorAll('.customer_options .option');
+    let customerBtn_text = customerOptionMenus.querySelector('.sBtn-text');
 
-    selectedBtn.addEventListener('click', () => optionMenus.classList.toggle('active'));
+    customerOptionMenus.addEventListener('click', function () {
+        dropdownCustomerOptions.classList.toggle('show');
+    })
 
-    optionsData.forEach(option => {
+    customerOptionsData.forEach(option => {
         option.addEventListener('click', () => {
-            let selectedOption = option.querySelector('.option-text').innerText;
-            Btn_text.value = selectedOption;
-            optionMenus.classList.remove('active');
+            let customerSelectedOption = option.querySelector('.option-text').innerText;
+            customerBtn_text.value = customerSelectedOption;
+            customerOptionMenus.classList.remove('active');
         });
     });
 });
