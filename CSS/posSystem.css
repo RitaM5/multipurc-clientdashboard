@@ -105,6 +105,9 @@ li {
     transition: all .3s ease;
     font-size: 1rem;
     font-weight: 500;
+    background-color: transparent;
+    text-align: left;
+    pointer-events: none;
 }
 
 .selects_category {
@@ -168,6 +171,7 @@ li {
     transition: all .3s ease;
     font-size: 1rem;
     font-weight: 500;
+    pointer-events: none;
 }
 
 .selects_brand {
@@ -392,7 +396,8 @@ li {
     width: 100%;
 }
 
-.product-details #black-btn {
+.product-details #black-btn,
+.product-details #white-btn{
     background-color: #F8F8F8;
     padding: .20rem .50rem;
     border-radius: 1.2rem;
@@ -403,7 +408,10 @@ li {
     background-color: #000;
     color: #fff;
 }
-
+.product-details #white-btn.active {
+    background-color: #000;
+    color: #fff;
+}
 .choose-content .select-number {
     width: 100%;
     display: flex;
@@ -474,6 +482,7 @@ li {
     transition: all .3s ease;
     font-size: 1rem;
     font-weight: 500;
+    pointer-events: none;
 }
 
 .walking_customer {
@@ -692,18 +701,32 @@ li {
 }
 
 .payment-system-content {
-    display: flex;
-    align-items: center;
+    display:flex;
     justify-content: space-between;
-    padding-top: 2.2rem;
+    padding-top: 3rem;
+    width: 100%;
 }
 
-.payment-system-content button {
+.payment-system-content .cash-payment {
+    background-color: #DBFFD6;
+    padding: .30rem 2rem;
+    height: 2.2rem;
+    min-width: 130%;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(163, 159, 159);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.payment-system-content .online-payment {
     background-color: #DBFFD6;
     padding: .30rem 2rem;
     height: 2.2rem;
     border-radius: 3rem;
-    width: 100%;
+    min-width: 100%;
     border: none;
     outline: none;
     border: 2px solid rgb(163, 159, 159);
@@ -716,7 +739,8 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.2rem;
+    gap: 1rem;
+    padding-top: 1rem;
 }
 
 .cancel-order-content button {
@@ -724,7 +748,7 @@ li {
     height: 2.2rem;
     border-radius: 3rem;
     width: 100%;
-    min-width: 154px;
+    min-width: 160px;
     border: none;
     outline: none;
     border: 2px solid rgb(163, 159, 159);
@@ -836,6 +860,11 @@ li {
         grid-template-columns: repeat(1, 1fr);
         gap: .56rem;
     }
+    .cancel-order-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .56rem;
+    }
 }
 
 @media screen and (min-width:446px) and (max-width: 1060px) {
@@ -843,7 +872,7 @@ li {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .cancel-order-content {
@@ -851,6 +880,9 @@ li {
         align-items: center;
         justify-content: flex-start;
         gap: 1rem;
+    }
+    .cancel-order-content button {
+        min-width: 152px;
     }
 }
 
@@ -885,6 +917,11 @@ li {
 @media screen and (min-width:272px) and (max-width:576px) {
     .choose-content {
         display: block;
+    }
+}
+@media screen and (min-width:272px) and (max-width: 1550px) {
+    .payment-system-content .cash-payment {
+        min-width: 100%;
     }
 }
 

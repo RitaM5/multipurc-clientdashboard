@@ -163,41 +163,7 @@
                     </svg>
                     <i class='bx bx-chevron-right icon-right'></i></a>
                 </a>
-                <!--Submenu-->
-                <ul class="side-dropdown">
-                    <li class="aiz-side-nav-item">
-                        <a class="aiz-side-nav-link" href="#">
-                            <span class="aiz-side-nav-text"><i class="fas fa-arrow-right left-arrow"
-                                    style="font-size: .65rem; margin-right: .75rem;"></i>Add New auction product</span>
-                        </a>
-                    </li>
-                    <li class="aiz-side-nav-item">
-                        <a href="#" class="aiz-side-nav-link ">
-                            <span class="aiz-side-nav-text"><i class="fas fa-arrow-right left-arrow"
-                                    style="font-size: .65rem; margin-right: .75rem;"></i>All Auction Products</span>
-                        </a>
-                    </li>
-                    <li class="aiz-side-nav-item">
-                        <a href="#" class="aiz-side-nav-link">
-                            <span class="aiz-side-nav-text"><i class="fas fa-arrow-right left-arrow"
-                                    style="font-size: .65rem; margin-right: .75rem;"></i>Inhouse Auction Products</span>
-                        </a>
-                    </li>
-                    <li class="aiz-side-nav-item">
-                        <a href="#" class="aiz-side-nav-link">
-                            <span class="aiz-side-nav-text" style="position: relative; bottom: 4px;"><i
-                                    class="fas fa-arrow-right left-arrow"
-                                    style="font-size: .65rem; margin-right: .75rem;"></i>Seller Auction
-                                Products</span>
-                        </a>
-                    </li>
-                    <li class="aiz-side-nav-item">
-                        <a href="##" class="aiz-side-nav-link ">
-                            <span class="aiz-side-nav-text"><i class="fas fa-arrow-right left-arrow"
-                                    style="font-size: .65rem; margin-right: .75rem;"></i>Auction Products Orders</span>
-                        </a>
-                    </li>
-                </ul>
+             
             </li>
             <li class="aiz-side-nav-item">
                 <a href="#" class="aiz-side-nav-link" aria-expanded="false">
@@ -1327,7 +1293,7 @@
                         <div class="search_box_content">
                             <div class="percentage-select">
                                 <div class="select-btn">
-                                    <input type="text" class="sBtn-text" name="category" list="categories"
+                                    <input style=" pointer-events: none;" class="sBtn-text" name="category" list="categories"
                                         placeholder="Percentage">
                                     <i class="bx bx-chevron-down"></i>
                                 </div>
@@ -1371,8 +1337,8 @@
                             </div>
                         </div>
                         <div class="payment-system-content">
-                            <a href="#"><button style="width: 100%;">Cash</button></a>
-                            <a href="#"><button style="width: 100%;">Online Payment</button></a>
+                            <a href="#"><button class="cash-payment" style="width: 100%;">Cash</button></a>
+                            <a href="#"><button class="online-payment" style="width: 100%;">Online Payment</button></a>
                         </div>
                         <div class="cancel-order-content">
                             <a href="#"><button style="background-color: #F61111; width: 100%;">Cancel</button></a>
@@ -1447,13 +1413,28 @@
                                     style="display: flex; gap:2rem; align-items: center; font-size: 1rem; font-weight: 500;">
                                     <p>Color:</p>
                                     <div style="display: flex; gap:1rem; align-items: center;">
-                                        <p id="white-btn"
-                                            style="background-color: #F8F8F8; padding: .20rem .50rem; border-radius: 1.2rem; cursor: pointer;">
-                                            white</p>
+                                        <p id="white-btn" onclick="clickToWhite()">white</p>
                                         <p id="black-btn" onclick="clickToBlack()">Black</p>
                                     </div>
                                 </div>
-                                <div id="size-content" style="display: none;">
+                                <div id="white-size-content" style="display: none;">
+                                    <div
+                                        style="display: flex; gap:2.8rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
+                                        <p>Size:</p>
+                                        <div style="display: flex; gap:1rem; align-items: center;">
+                                            <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                S</p>
+                                                <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                L</p>
+                                            <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                M</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="black-size-content" style="display: none;">
                                     <div
                                         style="display: flex; gap:2.8rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
                                         <p>Size:</p>

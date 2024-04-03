@@ -270,10 +270,16 @@ function showImageFour() {
 // popup black button click
 
 function clickToBlack(){
-    document.getElementById('size-content').style.display = 'block';
+    document.getElementById('black-size-content').style.display = 'block';
+    document.getElementById('white-size-content').style.display = 'none';
     document.getElementById('black-btn').classList.add('active');
 }
 
+function clickToWhite(){
+    document.getElementById('white-size-content').style.display = 'block';
+    document.getElementById('black-size-content').style.display = 'none';
+    document.getElementById('white-btn').classList.add('active');
+}
 // end popup black btn click
 
 // right popup increase decrease value
