@@ -83,6 +83,8 @@ li {
     display: none;
 }
 
+/* update input */
+
 .updateInput-container{
     display: flex;
     gap: 2rem;

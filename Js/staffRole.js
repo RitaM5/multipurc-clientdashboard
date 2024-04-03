@@ -29,6 +29,7 @@ changeclose_btns.forEach(function (btn) {
         changeWrapper.classList.remove("active");
     });
 });
+
 // end change password popup
 
 // ----------End All Staff-----------

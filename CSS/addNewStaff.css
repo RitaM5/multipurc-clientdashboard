@@ -84,6 +84,8 @@ li {
     display: none;
 }
 
+/* data input container */
+
 .dataInput-container {
     display: flex;
     gap: 2rem;

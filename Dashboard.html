@@ -1482,7 +1482,9 @@
         <!-- end pos system -->
 
         <!-- Staff role manage 1. All staff css file(allStaff.css) and js file(StaffRole.js)-->
+
         <div id="allStaff" style="position: relative; display: none;">
+            <!-- all staff container css lines(47-87) -->
             <div class="allStaff-container" style="padding: 1.8rem 0rem;">
                 <div style="width: 100%;">
                     <p style="font-size: 1.3rem; font-weight: 600;"><span style="color:#ED5F0F ;">68</span> Employee</p>
@@ -1501,6 +1503,8 @@
                     </form>
                 </div>
             </div>
+            <!-- end all staff container -->
+            <!-- all staff content css lines(91-167) -->
             <div class="allStaff-content">
                 <div class="single-staff">
                     <div class="staff_Profile_content">
@@ -1783,6 +1787,8 @@
                     </div>
                 </div>
             </div>
+            <!-- end staff content -->
+            <!-- all staff footer btn css lines(168-182) -->
             <div style="display: flex; justify-content: end; padding: 2rem 0rem; width: 100%;">
                 <div class="allStaff_footer">
                     <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
@@ -1790,8 +1796,8 @@
                             style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
                 </div>
             </div>
-
-            <!-- trash button popup -->
+            <!-- end all staff btn footerF -->
+            <!-- trash button popup css lines(185-291) and js lines(4-17)-->
             <div class="trash-wrapper">
                 <div class="trash_project_wrap">
                     <div class=" shadow"></div>
@@ -1825,7 +1831,7 @@
             </div>
             <!-- end trash popup -->
 
-            <!-- change password button popup -->
+            <!-- change password button popup css lines(293-401) and js lines(19-32)-->
             <div class="changePass-wrapper">
                 <div class="pass_project_wrap">
                     <div class=" shadow"></div>
@@ -1868,6 +1874,7 @@
         <!-- signle staff edited content css file(updateStaff.css) and js file(StaffRole.js)-->
         <div id="singleStaff-edit" style=" display: none;">
             <p style="font-size: 1.3rem; font-weight: 600;">Edit Admin</p>
+            <!-- update img content css lines(47-84) and js lines(75-82)-->
             <div class="image-change-content">
                 <div class="selected-img" id="change-selected-img">
                     <img src="./img/profile.png" id="profile-pic" alt="" srcset="">
@@ -1885,6 +1892,8 @@
                         format: jpg,jpeg,png</p>
                 </div>
             </div>
+            <!-- end update img -->
+            <!-- update input container css lines(87-176) -->
             <div class="updateInput-container" style="padding: .50rem 0rem;">
                 <div class="leftUpdateInput-content">
                     <div class="updateName-container">
@@ -1901,6 +1910,7 @@
                         <label>Email</label></br>
                         <input type="email" placeholder="" />
                     </div>
+                    <!-- role js lines(86-102) -->
                     <div class="updateRole-container">
                         <label>Role</label></br>
                         <div class="edit-selects-role">
@@ -1920,6 +1930,7 @@
                     </div>
                 </div>
             </div>
+            <!-- end update input container -->
             <a href="#"><button>Update</button></a>
         </div>
         <!-- end single staff edited content -->
@@ -1929,6 +1940,7 @@
         <!-- Staff role manage 2. Add New Staff css file(addNewStaff.css) and js file(StaffRole.js)-->
         <div id="addNewStaff" style="position: relative; display: none;">
             <p style="font-size: 1.3rem; font-weight: 600;">Add new employee</p>
+            <!-- img upload content css lines(47-85) and js lines(40-48)-->
             <div class="image-upload-content">
                 <div class="selected-img">
                     <img src="./img/profile.png" id="profile-picture" alt="" srcset="">
@@ -1946,6 +1958,8 @@
                         format: jpg,jpeg,png</p>
                 </div>
             </div>
+            <!-- end img upload -->
+            <!-- data input container css lines(89-182) -->
             <div class="dataInput-container" style="padding: .60rem 0rem;">
                 <div class="leftInput-content">
                     <div class="name-container">
@@ -1960,6 +1974,7 @@
                         <label>Password</label></br>
                         <input type="password" placeholder="" />
                     </div>
+                    <!-- role js lines(51-68) -->
                     <div class="role-container">
                         <label>Role</label></br>
                         <div class="selects-role">
@@ -1993,6 +2008,8 @@
                     </div>
                 </div>
             </div>
+            <!-- end data input -->
+            <!-- btn css lines(183-196) -->
             <a href="#"><button>Add New Staff</button></a>
         </div>
         <!-- end add new staff -->
@@ -2000,6 +2017,7 @@
         <!-- Staff role manage_ 3. All Staff Role css file(allStaffRole.css) and js file(StaffRole.js)-->
 
         <div id="allStaffRole" style="position: relative; padding: 3rem 0rem; display: none;">
+            <!-- allStaffRole-container css lines(44-101) -->
             <div class="allStaffRole-container">
                 <div style="width: 100%;">
                     <p style="font-size: 1.3rem; font-weight: 600;">All Orders</p>
@@ -2019,6 +2037,8 @@
                     <button>New Role</button>
                 </div>
             </div>
+            <!-- end -->
+            <!-- allstaffrole table css lines(103-141) -->
             <div class="allstaffs-role-table" style="padding: 1.8rem 0rem;">
                 <table class="table" id="staffs-table">
                     <thead>
@@ -2072,6 +2092,8 @@
                     </tbody>
                 </table>
             </div>
+            <!-- end table -->
+            <!-- footer btn css lines(142-157) -->
             <div style="display: flex; justify-content: end; width: 100%;">
                 <div class="allStaffRole_footer">
                     <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
@@ -2079,6 +2101,7 @@
                             style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
                 </div>
             </div>
+            <!-- end footer btn -->
         </div>
 
         <!-- end all staff role-->
