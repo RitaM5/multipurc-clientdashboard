@@ -1,11 +1,46 @@
+// ---------All Staff-----------
+
+// for trash popup
+
+var trashWrapper = document.querySelector(".trash-wrapper");
+var trashclose_btns = document.querySelectorAll(".close_btn");
+
+function clickForRemove() {
+    trashWrapper.classList.add("active");
+}
+trashclose_btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        trashWrapper.classList.remove("active");
+    });
+});
+
+// end trash popup
+
+// for change password popup
+var changeWrapper = document.querySelector(".changePass-wrapper");
+var changeclose_btns = document.querySelectorAll(".close_btn");
+
+function clickChangePassword() {
+    changeWrapper.classList.add("active");
+    console.log('kkkkkkkkkkkkkk');
+}
+changeclose_btns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        changeWrapper.classList.remove("active");
+    });
+});
+// end change password popup
+
+// ----------End All Staff-----------
+
 // --------Add New Staff-------------
 
 // image upload
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let profilePic = document.getElementById('profile-picture');
     let inputFile = document.getElementById('input-files');
-    
+
     inputFile.onchange = function () {
         profilePic.src = URL.createObjectURL(inputFile.files[0]);
     }
@@ -37,10 +72,10 @@ roleLinkData.forEach(option => {
 // --------edit Staff-------------
 
 // image change
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let changeProfilePic = document.getElementById('profile-pic');
     let changeInputFile = document.getElementById('input-file');
-    
+
     changeInputFile.onchange = function () {
         changeProfilePic.src = URL.createObjectURL(changeInputFile.files[0]);
     }

@@ -163,7 +163,7 @@
                     </svg>
                     <i class='bx bx-chevron-right icon-right'></i></a>
                 </a>
-             
+
             </li>
             <li class="aiz-side-nav-item">
                 <a href="#" class="aiz-side-nav-link" aria-expanded="false">
@@ -1293,8 +1293,8 @@
                         <div class="search_box_content">
                             <div class="percentage-select">
                                 <div class="select-btn">
-                                    <input style=" pointer-events: none;" class="sBtn-text" name="category" list="categories"
-                                        placeholder="Percentage">
+                                    <input style=" pointer-events: none;" class="sBtn-text" name="category"
+                                        list="categories" placeholder="Percentage">
                                     <i class="bx bx-chevron-down"></i>
                                 </div>
                                 <ul class="percentage_options">
@@ -1410,7 +1410,7 @@
                                         $50.0</p>
                                 </div>
                                 <div
-                                    style="display: flex; gap:2rem; align-items: center; font-size: 1rem; font-weight: 500;">
+                                    style="display: flex; gap:1.2rem; align-items: center; font-size: 1rem; font-weight: 500;">
                                     <p>Color:</p>
                                     <div style="display: flex; gap:1rem; align-items: center;">
                                         <p id="white-btn" onclick="clickToWhite()">white</p>
@@ -1419,15 +1419,18 @@
                                 </div>
                                 <div id="white-size-content" style="display: none;">
                                     <div
-                                        style="display: flex; gap:2.8rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
+                                        style="display: flex; gap:1.6rem;  font-size: 1rem; align-items: center; font-weight: 500; padding: .85rem 0rem;">
                                         <p>Size:</p>
-                                        <div style="display: flex; gap:1rem; align-items: center;">
+                                        <div style="display: flex; gap:.55rem; align-items: center; font-size: .85rem;">
                                             <p
                                                 style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
-                                                S</p>
-                                                <p
-                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
                                                 L</p>
+                                            <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                XL</p>
+                                            <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                XXL</p>
                                             <p
                                                 style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
                                                 M</p>
@@ -1436,12 +1439,15 @@
                                 </div>
                                 <div id="black-size-content" style="display: none;">
                                     <div
-                                        style="display: flex; gap:2.8rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
+                                        style="display: flex; gap:1.6rem; align-items: center; font-size: 1rem; font-weight: 500; padding: .85rem 0rem;">
                                         <p>Size:</p>
-                                        <div style="display: flex; gap:1rem; align-items: center;">
+                                        <div style="display: flex; gap:.55rem; align-items: center; font-size: .85rem;">
                                             <p
                                                 style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
-                                                S</p>
+                                                XL</p>
+                                            <p
+                                                style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
+                                                XXL</p>
                                             <p
                                                 style=" width:30px ; height: 30px; display: flex; justify-content: center; align-items: center; background-color: #F8F8F8; padding: .20rem .50rem; border-radius:100%; cursor: pointer;">
                                                 M</p>
@@ -1475,7 +1481,7 @@
         <!-- end pos system -->
 
         <!-- Staff role manage 1) All staff css file(allStaff.css) and js file(StaffRole.js)-->
-        <div id="allStaff" style="position: relative; display: none;">
+        <div id="allStaff" style="position: relative; ">
             <div class="allStaff-container" style="padding: 1.8rem 0rem;">
                 <div style="width: 100%;">
                     <p style="font-size: 1.3rem; font-weight: 600;"><span style="color:#ED5F0F ;">68</span> Employee</p>
@@ -1517,11 +1523,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1549,11 +1558,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1581,11 +1593,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1613,11 +1628,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1645,11 +1663,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
-                                <button onclick="clickEditOne()" class="edit"><i class="fas fa-edit"
-                                        style="color: #fff; background-color: #2BD08B;"></i></button>
-                                <button class="change-pass" style="color: #fff; background-color: #2562D8; ">Change
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
+                                <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
+                                        class="fas fa-edit" style="color: #fff;"></i></button>
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1677,11 +1698,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1709,11 +1733,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1741,11 +1768,14 @@
                         <div style="padding: 1.1rem 0rem;">
                             <p style="font-weight: 600; font-size: 1rem;">Action</p>
                             <div class="action_content">
-                                <button class="trash" style="background-color: #F03030;"><i class="fas fa-trash"
-                                        style="color: #fff;"></i></button>
+                                <button onclick="clickForRemove()" class="trash" style="background-color: #F03030;"><i
+                                        class="fas fa-trash" style="color: #fff;"></i></button>
+                                <!-- js lines in (Dashboard.js files (121-128)) -->
                                 <button onclick="clickEditOne()" class="edit" style="background-color: #2BD08B;"><i
                                         class="fas fa-edit" style="color: #fff;"></i></button>
-                                <button class="change-pass" style="background-color: #2562D8; color: #fff;">Change
+                                <!-- end -->
+                                <button onclick="clickChangePassword()" class="change-pass"
+                                    style="background-color: #2562D8; color: #fff;">Change
                                     Password</button>
                             </div>
                         </div>
@@ -1759,6 +1789,76 @@
                             style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
                 </div>
             </div>
+
+            <!-- trash button popup -->
+            <div class="trash-wrapper">
+                <div class="trash_project_wrap">
+                    <div class=" shadow"></div>
+                    <div class="project">
+                        <div class="headers">
+                            <div class="icons">
+                                <span class=" close_btn">
+                                    <ion-icon name="close-outline" class="i"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div style="margin: 0 auto;">
+                                <div
+                                    style="display: flex; justify-content: center; align-items: center; background-color: #f7eded; width: 70px; height: 70px; border-radius: 100%;">
+                                    <i class="fas fa-trash" style="color: #FF3F56; font-size: 1.5rem;"></i>
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <p style="font-size: 1.3rem; font-weight: 600;">Delete Project</p>
+                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem;">You’re going to delete the
+                                    Demo project</p>
+                            </div>
+                            <div class="trash_btn" style="margin: 0 auto;">
+                                <button style="background-color: #F5F5F7;">No, Keep It</button>
+                                <button style="color: #fff; background-color: #FF3F56;">Yes, Delete!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end trash popup -->
+
+            <!-- change password button popup -->
+            <div class="changePass-wrapper">
+                <div class="pass_project_wrap">
+                    <div class=" shadow"></div>
+                    <div class="project">
+                        <div class="headers">
+                            <div class="icons">
+                                <span class=" close_btn">
+                                    <ion-icon name="close-outline" class="i"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div style="text-align: center;">
+                                <p style="font-size: 1.3rem; font-weight: 600;">Change Your Password</p>
+                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">Enter a new password below to change your password</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: .30rem;">
+                                <div class="changePassword-container">
+                                    <label>Password</label></br>
+                                    <input type="password" placeholder="" />
+                                </div>
+                                <div class="changeConfirmPassword-container">
+                                    <label>Confirm Password</label></br>
+                                    <input type="password" placeholder="" />
+                                </div>
+                                <input style="margin-top: .45rem; width: 100%; border: none; outline: none; background-color: #1B434D;
+                                height: 2.6rem; color: #fff; font-size: .95rem; font-weight: 500; border-radius: .5rem;" type="button" value="Change your password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end change password popup -->
+
         </div>
 
         <!-- signle staff edited content css file(updateStaff.css) and js file(StaffRole.js)-->
