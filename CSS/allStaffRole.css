@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #F1F0F6;
+    --dark-grey: #8D8D8D;
+    --light: #fff;
+    --dark: #000;
+    --green: #81D43A;
+    --light-green: #E3FFCB;
+    --blue: #1775F1;
+    --light-blue: #D0E4FF;
+    --dark-blue: #0C5FCD;
+    --red: #FC3B56;
+    --darkGreen: #051013;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.allStaffRole-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.staffSearch_content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.staffSearch_content form {
+    width: 100%;
+    margin-right: auto;
+}
+
+.staffSearch_content .form-group {
+    position: relative;
+}
+
+.staffSearch_content .form-group input {
+    width: 100%;
+    background: var(--grey);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    padding: 11px 36px 11px 16px;
+    transition: all .3s ease;
+}
+
+.staffSearch_content .form-group input:focus {
+    box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+}
+
+.staffSearch_content .form-group .icon {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+}
+
+.staffSearch_content button{
+    width: 100%;
+    max-width: 100px;
+    border: none;
+    outline: none;
+    padding: .50rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1B434D;
+    border-radius: 2rem;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+/* table */
+
+.allstaffs-role-table .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+
+.allstaffs-role-table .table th {
+    background-color: #F0F0F0;
+    text-align: center;
+    font-size: 1rem;
+    padding: .60rem 0rem;
+    font-weight: 600;
+}
+
+.allstaffs-role-table .table td {
+    text-align: center;
+    font-size: .95rem;
+    padding: .55rem 0rem;
+}
+
+.allstaffs-role-table .table tbody .id{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.allstaffs-role-table .table td input {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+}
+
+.allstaffs-role-table .table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* table end */
+
+.allStaffRole_footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0rem;
+}
+
+.allStaffRole_footer button {
+    width: 125px;
+    height: 40px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* responsive */
+
+@media screen and (min-width:272px) and (max-width:999px){
+    .staffSearch_content form {
+        display: block;
+    }
+}
+@media screen and (min-width:272px) and (max-width:768px){
+    .allStaffRole-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    /* table */
+    .allstaffs-role-table .table thead {
+        display: none;
+    }
+
+    .allstaffs-role-table .table,
+    .allstaffs-role-table .table tbody,
+    .allstaffs-role-table .table tr,
+    .allstaffs-role-table .table td {
+        display: block;
+        width: 100%;
+    }
+
+    .allstaffs-role-table .table tbody .id{
+        justify-content: end; 
+    }
+
+    .allstaffs-role-table .table tr {
+        margin-bottom: 15px;
+    }
+
+    .allstaffs-role-table .table td {
+        text-align: right;
+        padding-left: 50%;
+        text-align: right;
+        position: relative;
+    }
+
+    .allstaffs-role-table .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+}
+@media screen and (min-width:272px) and (max-width:400px){
+
+    .staffSearch_content {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .staffSearch_content button{
+      max-width: 100%;
+    }
+    .allStaffRole_footer {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: 100%;
+    }
+    .allStaffRole_footer button {
+       width: 100%;
+    }
+}

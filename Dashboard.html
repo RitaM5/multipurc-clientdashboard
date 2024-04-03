@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./CSS/allStaf.css">
     <link rel="stylesheet" href="./CSS/addNewStaff.css">
     <link rel="stylesheet" href="./CSS/updateStaff.css">
+    <link rel="stylesheet" href="./CSS/allStaffRole.css">
     <link rel="stylesheet" href="./CSS/Dashboard.css">
 
 </head>
@@ -427,7 +428,7 @@
         <!-- NAVBAR -->
         <!-- main content -->
         <!-- dashboard css lines(520-604) & js lines(97-127)-->
-        <div id="userLevel2-dashboard" style="padding: 3rem 0rem; display: none;">
+        <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
             <div>
                 <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
                 <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
@@ -1480,8 +1481,8 @@
         </div>
         <!-- end pos system -->
 
-        <!-- Staff role manage 1) All staff css file(allStaff.css) and js file(StaffRole.js)-->
-        <div id="allStaff" style="position: relative; ">
+        <!-- Staff role manage 1. All staff css file(allStaff.css) and js file(StaffRole.js)-->
+        <div id="allStaff" style="position: relative; display: none;">
             <div class="allStaff-container" style="padding: 1.8rem 0rem;">
                 <div style="width: 100%;">
                     <p style="font-size: 1.3rem; font-weight: 600;"><span style="color:#ED5F0F ;">68</span> Employee</p>
@@ -1839,7 +1840,8 @@
                         <div class="container">
                             <div style="text-align: center;">
                                 <p style="font-size: 1.3rem; font-weight: 600;">Change Your Password</p>
-                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">Enter a new password below to change your password</p>
+                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">
+                                    Enter a new password below to change your password</p>
                             </div>
                             <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: .30rem;">
                                 <div class="changePassword-container">
@@ -1850,8 +1852,10 @@
                                     <label>Confirm Password</label></br>
                                     <input type="password" placeholder="" />
                                 </div>
-                                <input style="margin-top: .45rem; width: 100%; border: none; outline: none; background-color: #1B434D;
-                                height: 2.6rem; color: #fff; font-size: .95rem; font-weight: 500; border-radius: .5rem;" type="button" value="Change your password">
+                                <input
+                                    style="margin-top: .45rem; width: 100%; border: none; outline: none; background-color: #1B434D;
+                                height: 2.6rem; color: #fff; font-size: .95rem; font-weight: 500; border-radius: .5rem;"
+                                    type="button" value="Change your password">
                             </div>
                         </div>
                     </div>
@@ -1922,7 +1926,7 @@
 
         <!-- end All staff -->
 
-        <!-- Staff role manage 2) Add New Staff css file(addNewStaff.css) and js file(StaffRole.js)-->
+        <!-- Staff role manage 2. Add New Staff css file(addNewStaff.css) and js file(StaffRole.js)-->
         <div id="addNewStaff" style="position: relative; display: none;">
             <p style="font-size: 1.3rem; font-weight: 600;">Add new employee</p>
             <div class="image-upload-content">
@@ -1993,7 +1997,94 @@
         </div>
         <!-- end add new staff -->
 
-        <!-- add new product css file(addnew.css) and js(clientDashboard.js) by rita -->
+        <!-- Staff role manage_ 3. All Staff Role css file(allStaffRole.css) and js file(StaffRole.js)-->
+
+        <div id="allStaffRole" style="position: relative; padding: 3rem 0rem; display: none;">
+            <div class="allStaffRole-container">
+                <div style="width: 100%;">
+                    <p style="font-size: 1.3rem; font-weight: 600;">All Orders</p>
+                    <div
+                        style="padding: .20rem 0rem; color: #909090; display: flex; align-items: center; gap: 1.5rem; font-size: 1rem; font-weight: 500;">
+                        <p>Show 10</p>
+                        <p>Entries</p>
+                    </div>
+                </div>
+                <div class="staffSearch_content">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search Here">
+                            <i class='bx bx-search icon'></i>
+                        </div>
+                    </form>
+                    <button>New Role</button>
+                </div>
+            </div>
+            <div class="allstaffs-role-table" style="padding: 1.8rem 0rem;">
+                <table class="table" id="staffs-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                        <tr>
+                            <td data-label="ID">173</td>
+                            <td data-label="Name">N H imon</td>
+                            <td data-label="Actions">Demo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="display: flex; justify-content: end; width: 100%;">
+                <div class="allStaffRole_footer">
+                    <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
+                    <a href="#"><button
+                            style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- end all staff role-->
+
+        <!--Products_ 1.add new product css file(addnew.css) and js(clientDashboard.js) by rita -->
+
         <div id="addNewProduct" style="display: none;">
             <div class="header-title">
                 <div class="left-arrow">
