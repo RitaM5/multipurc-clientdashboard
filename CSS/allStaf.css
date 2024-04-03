@@ -507,13 +507,23 @@ li {
     }
 }
 
-@media screen and (min-width:272px) and (max-width: 472px) {
+@media screen and (min-width:351px) and (max-width: 492px) {
 
     .trash-wrapper .trash_project_wrap .project {
         width: 100%;
-        max-width: 80%;
+        max-width: 70%;
         max-height: 370px;
-        left: 40%;
+        left: 39%;
+    }
+
+}
+@media screen and (min-width:272px) and (max-width: 350px) {
+
+    .trash-wrapper .trash_project_wrap .project {
+        width: 100%;
+        max-width: 66%;
+        max-height: 370px;
+        left: 36%;
     }
 
 }
