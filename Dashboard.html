@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./CSS/addNewStaff.css">
     <link rel="stylesheet" href="./CSS/updateStaff.css">
     <link rel="stylesheet" href="./CSS/allStaffRole.css">
+    <link rel="stylesheet" href="./CSS/manageUsers.css">
     <link rel="stylesheet" href="./CSS/Dashboard.css">
 
 </head>
@@ -164,7 +165,20 @@
                     </svg>
                     <i class='bx bx-chevron-right icon-right'></i></a>
                 </a>
-
+                <ul class="side-dropdown">
+                    <li onclick="showAllUser()" class="aiz-side-nav-item">
+                        <a class="aiz-side-nav-link" href="#">
+                            <i class="fas fa-arrow-right left-arrow"
+                                style="font-size: .65rem; margin-right: .75rem;"></i>All User
+                        </a>
+                    </li>
+                    <li class="aiz-side-nav-item">
+                        <a href="#" class="aiz-side-nav-link ">
+                            <i class="fas fa-arrow-right left-arrow"
+                                style="font-size: .65rem; margin-right: .75rem;"></i>Add new
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="aiz-side-nav-item">
                 <a href="#" class="aiz-side-nav-link" aria-expanded="false">
@@ -2015,48 +2029,701 @@
         <!-- end add new staff -->
 
         <!-- Staff role manage_ 3. All Staff Role css file(allStaffRole.css) and js file(StaffRole.js)-->
-
-        <div id="allStaffRole" style="position: relative; padding: 3rem 0rem; display: none;">
-            <!-- allStaffRole-container css lines(44-101) -->
-            <div class="allStaffRole-container">
-                <div style="width: 100%;">
-                    <p style="font-size: 1.3rem; font-weight: 600;">All Orders</p>
-                    <div
-                        style="padding: .20rem 0rem; color: #909090; display: flex; align-items: center; gap: 1.5rem; font-size: 1rem; font-weight: 500;">
-                        <p>Show 10</p>
-                        <p>Entries</p>
+        <div>
+            <div id="allStaffRole" style="position: relative; padding: 3rem 0rem; display: none;">
+                <!-- allStaffRole-container css lines(44-101) -->
+                <div class="allStaffRole-container">
+                    <div style="width: 100%;">
+                        <p style="font-size: 1.3rem; font-weight: 600;">All Orders</p>
+                        <div
+                            style="padding: .20rem 0rem; color: #909090; display: flex; align-items: center; gap: 1.5rem; font-size: 1rem; font-weight: 500;">
+                            <p>Show 10</p>
+                            <p>Entries</p>
+                        </div>
+                    </div>
+                    <div class="staffSearch_content">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search Here">
+                                <i class='bx bx-search icon'></i>
+                            </div>
+                        </form>
+                        <button onclick="clickToGoNewRole()">New Role</button>
                     </div>
                 </div>
-                <div class="staffSearch_content">
-                    <form action="#">
-                        <div class="form-group">
-                            <input type="text" placeholder="Search Here">
-                            <i class='bx bx-search icon'></i>
+                <!-- end -->
+                <!-- allstaffrole table css lines(103-141) -->
+                <div class="allstaffs-role-table" style="padding: 1.8rem 0rem;">
+                    <table class="table" id="staffs-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Actions">Demo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end table -->
+                <!-- footer btn css lines(142-157) -->
+                <div style="display: flex; justify-content: end; width: 100%;">
+                    <div class="allStaffRole_footer">
+                        <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
+                        <a href="#"><button
+                                style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
+                    </div>
+                </div>
+                <!-- end footer btn -->
+            </div>
+            <!-- new Role content css lines(163-285) -->
+            <div id="newRoleContent" style="position: relative; padding: 3rem 0rem; display: none;">
+                <div class="newRole-content">
+                    <div class="newRole-header">
+                        <p style="font-size: 1.3rem; font-weight: 600;">New Role</p>
+                        <button>All Role</button>
+                    </div>
+                    <div class="newRoleSearch_content">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Name">
+                                <i class='bx bx-search icon'></i>
+                            </div>
+                        </form>
+                        <button>Check All</button>
+                    </div>
+                </div>
+                <div class="newRoleToggle-content">
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch" class="checkbox" />
+                                <label for="switch" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
                         </div>
-                    </form>
-                    <button>New Role</button>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch1" class="checkbox" />
+                                <label for="switch1" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch2" class="checkbox" />
+                                <label for="switch2" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch3" class="checkbox" />
+                                <label for="switch3" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch4" class="checkbox" />
+                                <label for="switch4" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch5" class="checkbox" />
+                                <label for="switch5" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch6" class="checkbox" />
+                                <label for="switch6" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch7" class="checkbox" />
+                                <label for="switch7" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch8" class="checkbox" />
+                                <label for="switch8" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch9" class="checkbox" />
+                                <label for="switch9" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch10" class="checkbox" />
+                                <label for="switch10" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch11" class="checkbox" />
+                                <label for="switch11" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch12" class="checkbox" />
+                                <label for="switch12" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch13" class="checkbox" />
+                                <label for="switch13" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch14" class="checkbox" />
+                                <label for="switch14" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch15" class="checkbox" />
+                                <label for="switch15" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch16" class="checkbox" />
+                                <label for="switch16" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newRole-toggle-container">
+                        <p style="font-size: 1.1rem; font-weight: 600;">Form submission 222</p>
+                        <div class="toggle-content">
+                            <div>
+                                <input type="checkbox" id="switch17" class="checkbox" />
+                                <label for="switch17" class="toggle">
+                                    <p
+                                        style="color: #fff; font-weight: 500; font-size: 1rem; display: flex; justify-content:space-around; align-items: center; margin-top: .45rem;">
+                                        <span>On</span><span>Off</span>
+                                    </p>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input
+                    style="padding: .65rem 3.4rem; cursor: pointer; margin: 2rem 0rem; font-size: .95rem; font-weight: 500; color: #fff; background-color:#1B434D ; border: none; outline: none; border-radius: 2rem;"
+                    type="button" value="Submit">
+            </div>
+            <!-- new Role content -->
+        </div>
+        <!-- end all staff role-->
+
+        <!-- Users Manges css files(manageUsers.css) and js files(manageUsers.js)-->
+        <div>
+            <!-- Users Manges_ 1. All user css lines(43-374)-->
+            <div id="usersManage-allUser" style="position: relative; padding: 3rem 0rem; display: none;">
+                <!-- allStaffRole-container css lines(44-88) -->
+                <div class="usersManage-allUser-container">
+                    <div style="width: 100%;">
+                        <p style="font-size: 1.3rem; font-weight: 600;">All Users</p>
+                        <div
+                            style="padding: .20rem 0rem; color: #909090; display: flex; align-items: center; gap: 1.5rem; font-size: 1rem; font-weight: 500;">
+                            <p>Show 10</p>
+                            <p>Entries</p>
+                        </div>
+                    </div>
+                    <div class="allUserSearch_content">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search Here">
+                                <i class='bx bx-search icon'></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end -->
+                <!-- allstaffrole table css lines(90-135) -->
+                <div class="usersManage-allUser-table" style="padding: 1.8rem 0rem;">
+                    <table class="table" id="allUser-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Plan</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="ID">173</td>
+                                <td data-label="Name">N H imon</td>
+                                <td data-label="Email">imuimon9@gmail.com</td>
+                                <td data-label="Plan">show which plan user using</td>
+                                <td class="table_action" data-label="Action">
+                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                        <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
+                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
+                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- end table -->
+                <!-- footer btn css lines(137-52) -->
+                <div style="width: 100%;">
+                    <div class="usersManage-allUser_footer">
+                        <p style="font-size: 1rem; font-weight: 500; color: #909090;">Showing 1 to 10 of 172 entries</p>
+                        <a href="#"><button
+                                style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
+                    </div>
+                </div>
+                <!-- end footer btn -->
+            <!--All user trash button popup css lines(153-260) and js lines(3-16)-->
+            <div class="allUsertrash-wrapper">
+                <div class="allUsertrash_project_wrap">
+                    <div class=" shadow"></div>
+                    <div class="project">
+                        <div class="headers">
+                            <div class="icons">
+                                <span class=" close_btn">
+                                    <ion-icon name="close-outline" class="i"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div style="margin: 0 auto;">
+                                <div
+                                    style="display: flex; justify-content: center; align-items: center; background-color: #f7eded; width: 70px; height: 70px; border-radius: 100%;">
+                                    <i class="fas fa-trash" style="color: #FF3F56; font-size: 1.5rem;"></i>
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <p style="font-size: 1.3rem; font-weight: 600;">Delete Project</p>
+                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem;">You’re going to delete the
+                                    Demo project</p>
+                            </div>
+                            <div class="trash_btn" style="margin: 0 auto;">
+                                <button style="background-color: #F5F5F7;">No, Keep It</button>
+                                <button style="color: #fff; background-color: #FF3F56;">Yes, Delete!</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- end -->
-            <!-- allstaffrole table css lines(103-141) -->
-            <div class="allstaffs-role-table" style="padding: 1.8rem 0rem;">
-                <table class="table" id="staffs-table">
+            <!-- end trash popup -->
+
+            <!--allUser change password button popup css lines(264-370) and js lines(19-30)-->
+            <div class="allUserChangePass-wrapper">
+                <div class="allUserPass_project_wrap">
+                    <div class=" shadow"></div>
+                    <div class="project">
+                        <div class="headers">
+                            <div class="icons">
+                                <span class=" close_btn">
+                                    <ion-icon name="close-outline" class="i"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div style="text-align: center;">
+                                <p style="font-size: 1.3rem; font-weight: 600;">Change Your Password</p>
+                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">
+                                    Enter a new password below to change your password</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: .30rem;">
+                                <div class="allUserChangePassword-container">
+                                    <label>Password</label></br>
+                                    <input type="password" placeholder="" />
+                                </div>
+                                <div class="allUserChangeConfirmPassword-container">
+                                    <label>Confirm Password</label></br>
+                                    <input type="password" placeholder="" />
+                                </div>
+                                <input
+                                    style="margin-top: .45rem; cursor: pointer; width: 100%; border: none; outline: none; background-color: #1B434D;
+                                height: 2.6rem; color: #fff; font-size: .95rem; font-weight: 500; border-radius: .5rem;"
+                                    type="button" value="Change your password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end change password popup -->
+            </div>
+            <!--End Users Manges_ 1. All user-->
+        </div>
+        <!-- end Users Manges -->
+
+        <!-- product order manage -->
+        <div style="display: none;">
+            <div class="usersManage-allUser-table" style="padding: 1.8rem 0rem;">
+                <table class="table" id="allUser-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Actions</th>
+                            <th>Order ID</th>
+                            <th>Billing Name</th>
+                            <th>Billing Email</th>
+                            <th>Total Amount</th>
+                            <th>Payment Gateway</th>
+                            <th>Payment Status</th>
+                            <th>Order Status</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                            <th>Invoice</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
+                            <td data-label="Order ID">173</td>
+                            <td data-label="Billing Name">N H imon</td>
+                            <td data-label="Billing Email">imuimon9@gmail.com</td>
+                            <td data-label="Total Amount">$50</td>
+                            <td data-label="Payment Gateway">Demo</td>
+                            <td data-label="Payment Status">
+                                <button style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                            </td>
+                            <td data-label="Order Status">
+                                <button style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                            </td>
+                            <td data-label="Date">27-03-2024</td>
+                            <td class="table_action" data-label="Action">
+                                <button style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                    <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                </button>
+                                <button style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                    <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
+                                </button>
+                                <button style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update Status</button>
+                            </td>
+                            <td data-label="Invoice">
+                                <button style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                            </td>
                         </tr>
                         <tr>
                             <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
+                            <td data-label="Name">MD Najmul Hasan</td>
                             <td data-label="Actions">Demo</td>
                         </tr>
                         <tr>
@@ -2092,22 +2759,10 @@
                     </tbody>
                 </table>
             </div>
-            <!-- end table -->
-            <!-- footer btn css lines(142-157) -->
-            <div style="display: flex; justify-content: end; width: 100%;">
-                <div class="allStaffRole_footer">
-                    <a href="#"><button style="border: 1px solid rgb(191, 188, 188);">Previous</button></a>
-                    <a href="#"><button
-                            style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
-                </div>
-            </div>
-            <!-- end footer btn -->
         </div>
-
-        <!-- end all staff role-->
+        <!-- end product order manage -->
 
         <!--Products_ 1.add new product css file(addnew.css) and js(clientDashboard.js) by rita -->
-
         <div id="addNewProduct" style="display: none;">
             <div class="header-title">
                 <div class="left-arrow">
@@ -2357,6 +3012,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./js/staffRole.js"></script>
+    <script src="./js/manageUsers.js"></script>
     <script src="./js/Dashboard.js"></script>
 </body>
 

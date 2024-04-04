@@ -86,6 +86,8 @@ function showLevel2Dashboard() {
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function showPosSystem() {
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -95,6 +97,8 @@ function showPosSystem() {
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function addNewProduct(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -104,6 +108,8 @@ function addNewProduct(){
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function showAllStaff(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -113,6 +119,8 @@ function showAllStaff(){
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function addNewStaff(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -122,6 +130,8 @@ function addNewStaff(){
     document.getElementById('addNewStaff').style.display = 'block';
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function allStaffRole(){
     document.getElementById('allStaffRole').style.display = 'block';
@@ -131,6 +141,19 @@ function allStaffRole(){
     document.getElementById('allStaff').style.display = 'none';
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
+}
+function clickToGoNewRole(){
+    document.getElementById('newRoleContent').style.display = 'block';
+    document.getElementById('allStaffRole').style.display = 'none';
+	document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
 function clickEditOne(){
     document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -139,7 +162,22 @@ function clickEditOne(){
     document.getElementById('allStaff').style.display = 'none';
     document.getElementById('addNewStaff').style.display = 'none';
     document.getElementById('singleStaff-edit').style.display = 'block';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
 }
+function showAllUser(){
+    document.getElementById('usersManage-allUser').style.display = 'block';
+    document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('allStaffRole').style.display = 'none';
+}
+
 // ---------Dashboard Content----------
 
 document.addEventListener('DOMContentLoaded', function() {

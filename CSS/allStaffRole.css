@@ -41,7 +41,7 @@ li {
 }
 
 
-.allStaffRole-container{
+.allStaffRole-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,7 +86,7 @@ li {
     font-size: 1.5rem;
 }
 
-.staffSearch_content button{
+.staffSearch_content button {
     width: 100%;
     max-width: 100px;
     border: none;
@@ -122,9 +122,9 @@ li {
     padding: .55rem 0rem;
 }
 
-.allstaffs-role-table .table tbody .id{
+.allstaffs-role-table .table tbody .id {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -156,19 +156,159 @@ li {
     cursor: pointer;
 }
 
+/* all staff role end */
+
+/* New Role */
+
+.newRole-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.newRole-header button {
+    background-color: #1B434D;
+    border: none;
+    outline: none;
+    border-radius: .75rem;
+    color: #fff;
+    padding: .45rem 1.5rem;
+    font-size: .95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.newRoleSearch_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.6rem 0rem;
+}
+
+.newRoleSearch_content form {
+    width: 100%;
+    margin-right: auto;
+}
+
+.newRoleSearch_content .form-group {
+    position: relative;
+}
+
+.newRoleSearch_content .form-group input {
+    width: 100%;
+    background: var(--grey);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    padding: 11px 36px 11px 16px;
+    transition: all .3s ease;
+}
+
+.newRoleSearch_content .form-group input:focus {
+    box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+}
+
+.newRoleSearch_content .form-group .icon {
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: var(--dark-grey);
+    font-size: 1.5rem;
+}
+
+.newRoleSearch_content button {
+    background-color: #1B434D;
+    border: none;
+    outline: none;
+    border-radius: .75rem;
+    color: #fff;
+    padding: .45rem 1.5rem;
+    font-size: .95rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    max-width: 120px;
+}
+
+/* toggle */
+
+.newRoleToggle-content{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+}
+
+.newRoleToggle-content {
+    padding: 1.4rem 0rem;
+}
+
+.toggle-content {
+    padding: .95rem 0rem;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 82px;
+    height: 35px;
+    background: #C2C2C2;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 1px;
+    left: 1px;
+    transition: all 0.5s;
+}
+
+.checkbox:checked+.toggle::after {
+    left: 47px;
+}
+
+.checkbox:checked+.toggle {
+    background-color: #31BD94;
+}
+
+.checkbox {
+    display: none;
+}
+
+/* end toggle */
+/* New Role end */
+
 /* responsive */
 
-@media screen and (min-width:272px) and (max-width:999px){
+@media screen and (min-width:272px) and (max-width:999px) {
     .staffSearch_content form {
         display: block;
     }
+
+    .newRoleSearch_content form {
+        display: block;
+    }
 }
-@media screen and (min-width:272px) and (max-width:768px){
-    .allStaffRole-container{
+
+@media screen and (min-width:769px) and (max-width:999px) {
+    .newRoleToggle-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width:272px) and (max-width:768px) {
+    .allStaffRole-container {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
+
     /* table */
     .allstaffs-role-table .table thead {
         display: none;
@@ -182,8 +322,8 @@ li {
         width: 100%;
     }
 
-    .allstaffs-role-table .table tbody .id{
-        justify-content: end; 
+    .allstaffs-role-table .table tbody .id {
+        justify-content: end;
     }
 
     .allstaffs-role-table .table tr {
@@ -209,24 +349,58 @@ li {
     }
 
 }
-@media screen and (min-width:272px) and (max-width:400px){
+
+@media screen and (min-width:460px) and (max-width:768px) {
+
+    .newRoleToggle-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width:272px) and (max-width:459px) {
+
+    .newRoleToggle-content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:272px) and (max-width:400px) {
 
     .staffSearch_content {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    .staffSearch_content button{
-      max-width: 100%;
+
+    .staffSearch_content button {
+        max-width: 100%;
     }
+
     .allStaffRole_footer {
-        display:grid;
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         width: 100%;
     }
+
     .allStaffRole_footer button {
-       width: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:272px) and (max-width:340px) {
+    .newRole-header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .newRoleSearch_content {
+        padding: .75rem 0rem;
+        gap: .80rem;
+    }
+
+    .newRoleSearch_content button {
+        max-width: 100%;
     }
 }
