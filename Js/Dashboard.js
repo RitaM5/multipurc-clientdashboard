@@ -90,6 +90,9 @@ function showLevel2Dashboard() {
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function showPosSystem() {
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -103,6 +106,9 @@ function showPosSystem() {
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function addNewProduct(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -116,6 +122,9 @@ function addNewProduct(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function showAllStaff(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -129,6 +138,9 @@ function showAllStaff(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function addNewStaff(){
 	document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -142,6 +154,9 @@ function addNewStaff(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function allStaffRole(){
     document.getElementById('allStaffRole').style.display = 'block';
@@ -155,6 +170,9 @@ function allStaffRole(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function clickToGoNewRole(){
     document.getElementById('newRoleContent').style.display = 'block';
@@ -168,6 +186,9 @@ function clickToGoNewRole(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function clickEditOne(){
     document.getElementById('userLevel2-dashboard').style.display = 'none';
@@ -181,6 +202,9 @@ function clickEditOne(){
     document.getElementById('usersManage-allUser').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function showAllUser(){
     document.getElementById('usersManage-allUser').style.display = 'block';
@@ -194,6 +218,9 @@ function showAllUser(){
     document.getElementById('allStaffRole').style.display = 'none';
     document.getElementById('usersManage-userEdit').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function clickAllUserEdit(){
     document.getElementById('usersManage-userEdit').style.display = 'block';
@@ -207,6 +234,9 @@ function clickAllUserEdit(){
     document.getElementById('newRoleContent').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
     document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
 }
 function showProductAllOrder(){
     document.getElementById('productOrder-allOrder').style.display = 'block';
@@ -220,6 +250,57 @@ function showProductAllOrder(){
     document.getElementById('singleStaff-edit').style.display = 'none';
     document.getElementById('newRoleContent').style.display = 'none';
     document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
+}
+function showProductSuccessOrder(){
+    document.getElementById('productOrder-successOrder').style.display = 'block';
+    document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('usersManage-userEdit').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
+    document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
+}
+function showProductCancelOrder(){
+    document.getElementById('productOrder-cancelOrder').style.display = 'block';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('usersManage-userEdit').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
+    document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('productOrder-orderSetting').style.display = 'none';
+}
+function showProductOrderSetting(){
+    document.getElementById('productOrder-orderSetting').style.display = 'block';
+    document.getElementById('productOrder-successOrder').style.display = 'none';
+    document.getElementById('productOrder-allOrder').style.display = 'none';
+    document.getElementById('usersManage-userEdit').style.display = 'none';
+    document.getElementById('usersManage-allUser').style.display = 'none';
+    document.getElementById('userLevel2-dashboard').style.display = 'none';
+	document.getElementById('userLevel2-posSystem').style.display = 'none';
+	document.getElementById('addNewProduct').style.display = 'none';
+    document.getElementById('allStaff').style.display = 'none';
+    document.getElementById('addNewStaff').style.display = 'none';
+    document.getElementById('singleStaff-edit').style.display = 'none';
+    document.getElementById('newRoleContent').style.display = 'none';
+    document.getElementById('allStaffRole').style.display = 'none';
+    document.getElementById('productOrder-cancelOrder').style.display = 'none';
 }
 // ---------Dashboard Content----------
 

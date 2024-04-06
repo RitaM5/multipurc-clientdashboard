@@ -167,21 +167,146 @@ li {
 
 /* success order page start */
 
-#productOrder-successOrder{
-padding: 3rem 2.5rem;
+#productOrder-successOrder {
+    padding: 3rem 2.5rem;
+}
+
+.productOrder-successOrder-header {
+    padding: 2.4rem 0rem;
+    display: flex;
+    gap: .85rem;
+}
+
+.productOrder-successOrder-header button {
+    border: 1px solid rgb(212, 207, 207);
+    padding: .45rem 1rem;
+    width: 130px;
+    height: 42px;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.successOrder-name-container label,
+.successOrder-Description-container label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.successOrder-name-container input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.successOrder-Description-container textarea {
+    width: 100%;
+    border-radius: 1.2rem;
+    border: 2px solid rgb(156, 163, 175);
+    padding: 1rem;
+    margin-top: 8px;
 }
 
 /* end success order page */
 
+/* Product cancel page setting */
 
+#productOrder-cancelOrder {
+    padding: 3rem 2.5rem;
+}
 
+.productOrder-cancelOrder-header {
+    padding: 2.4rem 0rem;
+    display: flex;
+    gap: .85rem;
+}
 
+.productOrder-cancelOrder-header button {
+    border: 1px solid rgb(212, 207, 207);
+    padding: .45rem 1rem;
+    width: 130px;
+    height: 42px;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-size: .95rem;
+    font-weight: 500;
+}
 
+.cancelOrder-name-container label,
+.cancelOrder-Description-container label,
+.cancelOrder-subTitle-container label{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
 
+.cancelOrder-name-container input,
+.cancelOrder-subTitle-container input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: 1rem;
+}
 
+.cancelOrder-Description-container textarea {
+    width: 100%;
+    border-radius: 1.2rem;
+    border: 2px solid rgb(156, 163, 175);
+    padding: 1rem;
+    margin-top: 8px;
+}
 
+/* end product cancel page setting */
 
+/* Product Order Setting */
 
+#productOrder-orderSetting {
+    padding: 3rem 2.5rem;
+}
+
+.productOrder-orderSetting-header {
+    padding: 2.4rem 0rem;
+    display: flex;
+    gap: .85rem;
+}
+
+.productOrder-orderSetting-header button {
+    border: 1px solid rgb(212, 207, 207);
+    padding: .45rem 1rem;
+    width: 130px;
+    height: 42px;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-size: .95rem;
+    font-weight: 500;
+}
+
+.orderSetting-receivingEmail-container label{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.orderSetting-receivingEmail-container input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(156, 163, 175);
+    border-radius: 2rem;
+    box-sizing: border-box;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+/* end product order setting */
 
 /* ----Responsive---- */
 
@@ -219,6 +344,16 @@ padding: 3rem 2.5rem;
         gap: 1rem;
         align-items: flex-start;
     }
+    #productOrder-successOrder {
+        padding: 3rem 0rem;
+    }
+    #productOrder-cancelOrder {
+        padding: 3rem 0rem;
+    }
+    #productOrder-orderSetting {
+        padding: 3rem 0rem;
+    }
+    
 }
 
 @media screen and (min-width:272px) and (max-width:1050px) {
@@ -279,5 +414,30 @@ padding: 3rem 2.5rem;
 
     .productsManage-allOrder button {
         width: 100%;
+    }
+
+}
+
+@media screen and (min-width:272px) and (max-width:470px) {
+    .productOrder-successOrder-header {
+        flex-direction: column;
+
+    }
+    .productOrder-successOrder-header button{
+      width: 100%;
+    }
+    .productOrder-cancelOrder-header {
+        flex-direction: column;
+
+    }
+    .productOrder-cancelOrder-header button{
+      width: 100%;
+    }
+    .productOrder-orderSetting-header {
+        flex-direction: column;
+
+    }
+    .productOrder-orderSetting-header button{
+      width: 100%;
     }
 }

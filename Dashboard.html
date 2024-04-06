@@ -204,19 +204,19 @@
                                 style="font-size: .65rem; margin-right: .75rem;"></i>All Order
                         </a>
                     </li>
-                    <li class="aiz-side-nav-item">
+                    <li onclick="showProductSuccessOrder()" class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
                                 style="font-size: .65rem; margin-right: .75rem;"></i>Success Order Page
                         </a>
                     </li>
-                    <li class="aiz-side-nav-item">
+                    <li onclick="showProductCancelOrder()" class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
                                 style="font-size: .65rem; margin-right: .75rem;"></i>Cancel Order Page
                         </a>
                     </li>
-                    <li class="aiz-side-nav-item">
+                    <li onclick="showProductOrderSetting()" class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
                                 style="font-size: .65rem; margin-right: .75rem;"></i>Order Settings
@@ -443,7 +443,7 @@
         <!-- NAVBAR -->
         <!-- main content -->
         <!-- dashboard css lines(520-604) & js lines(97-127)-->
-        <div id="userLevel2-dashboard" style="padding: 3rem 0rem; display: none;">
+        <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
             <div>
                 <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
                 <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
@@ -2739,7 +2739,7 @@
                 <!-- end change password popup -->
             </div>
             <!--End Users Manges_ 1. All user-->
-            <!--  manage users edit user page css lines(379-442) -->
+            <!--  manage users edit user page css lines(379-442)-(manageUsers.css) -->
             <div id="usersManage-userEdit" style="position: relative; display: none;">
                 <p style="font-size: 1.3rem; font-weight: 600;">Edit User</p>
                 <div class="usersManage-dataInput-container" style="padding: 3.5rem 0rem;">
@@ -3033,19 +3033,99 @@
                 <!-- end footer btn -->
             </div>
             <!--End Product order manages_ 1. All Order -->
+
             <!-- Product order manages_ 2. Success Order Page css lines(43-166)-->
-            <div id="productOrder-successOrder">
-                <!--productOrder-allOrder-container css lines(43-102) -->
+            <div id="productOrder-successOrder" style="display: none;">
+                <!--productOrder-allOrder-container css lines(170-187) -->
                 <div class="productOrder-successOrder-container">
-                    <p style="font-size: 1.3rem; font-weight: 600;">Order Success Page Settings</p>
+                    <p style="font-size: 1.4rem; font-weight: 600;">Order Success Page Settings</p>
                     <div class="productOrder-successOrder-header">
-                        <button>English (USA)</button>
+                        <button style="background-color: #1B434D; color: #fff;">English (USA)</button>
                         <button>Arabic</button>
                     </div>
                 </div>
                 <!-- end productOrder-allOrder-container -->
+                <!-- product succeess order form css lines(169-270) -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem; padding: 1rem 0rem;">
+                    <div class="successOrder-name-container">
+                        <label>Main Title</label></br>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="successOrder-Description-container">
+                        <label>Description</label></br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <button
+                    style="margin-top: .95rem; background-color: #1B434D; color: #fff;  border: 1px solid rgb(212, 207, 207);
+                padding: .45rem 1rem; min-width: 130px; height: 42px; cursor: pointer; border-radius: 2rem; font-size: .95rem; font-weight: 500;">Update
+                    Change</button>
+                <!-- end product succeess order form css lines() -->
             </div>
             <!--End Product order manages_ 2. Success Order Page -->
+
+            <!-- Product order manages_ 3. Product Cancel Order Page css lines(220-266)-->
+            <div id="productOrder-cancelOrder" style="display: none;">
+                <!--productOrder-cancelOrder-container css lines(224-239) -->
+                <div class="productOrder-cancelOrder-container">
+                    <p style="font-size: 1.4rem; font-weight: 600;">Order Cancel Page Settings</p>
+                    <div class="productOrder-successOrder-header">
+                        <button style="background-color: #1B434D; color: #fff;">English (USA)</button>
+                        <button>Arabic</button>
+                    </div>
+                </div>
+                <!-- end productOrder-cancelOrder-container -->
+                <!-- Product Cancel Order form css lines(241-266) -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem; padding: 1rem 0rem;">
+                    <div class="cancelOrder-name-container">
+                        <label>Main Title</label></br>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="cancelOrder-subTitle-container">
+                        <label>Sub Title</label></br>
+                        <input type="text" placeholder="" />
+                        <sapn style="color: #9D9D9D; padding: .40rem .22rem;">(pkname) will be replaced by package name
+                        </sapn>
+                    </div>
+                    <div class="cancelOrder-Description-container">
+                        <label>Description</label></br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <button
+                    style="margin-top: .95rem; background-color: #1B434D; color: #fff;  border: 1px solid rgb(212, 207, 207);
+                padding: .45rem 1rem; min-width: 130px; height: 42px; cursor: pointer; border-radius: 2rem; font-size: .95rem; font-weight: 500;">Update
+                    Change</button>
+                <!-- end Product Cancel Order form css lines() -->
+            </div>
+            <!--End Product order manages_ 3. Product Cancel Order Page-->
+
+            <!-- Product order manages_ 4. Product Order Setting Page css lines(272-368)-->
+            <div id="productOrder-orderSetting" style="display: none;">
+                <!--productOrder-orderSetting-container css lines(276-291) -->
+                <div class="productOrder-orderSetting-container">
+                    <p style="font-size: 1.4rem; font-weight: 600;">Order Cancel Page Settings</p>
+                    <div class="productOrder-orderSetting-header">
+                        <button style="background-color: #1B434D; color: #fff;">English (USA)</button>
+                        <button>Arabic</button>
+                    </div>
+                </div>
+                <!-- end productOrder-orderSetting-container -->
+                <!-- Product order setting form css lines(293-307) -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem; padding: 1rem 0rem;">
+                    <div class="orderSetting-receivingEmail-container">
+                        <label>Order Receiving Email</label></br>
+                        <input type="text" placeholder="" />
+                        <sapn style="color: #9D9D9D; padding: .40rem .22rem;">Email address on which admin will receive
+                            order notification email.</sapn>
+                    </div>
+                </div>
+                <button
+                    style="margin-top: .95rem; background-color: #1B434D; color: #fff;  border: 1px solid rgb(212, 207, 207);
+                            padding: .45rem 1rem; min-width: 130px; height: 42px; cursor: pointer; border-radius: 2rem; font-size: .95rem; font-weight: 500;">Update</button>
+                <!-- end Product order setting form css lines() -->
+            </div>
+            <!--End Product order manages_ 3. Product Order Setting Page-->
         </div>
         <!-- end product order manage -->
 
