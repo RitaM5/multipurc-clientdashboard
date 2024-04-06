@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./CSS/updateStaff.css">
     <link rel="stylesheet" href="./CSS/allStaffRole.css">
     <link rel="stylesheet" href="./CSS/manageUsers.css">
+    <link rel="stylesheet" href="./CSS/productOrderManage.css">
     <link rel="stylesheet" href="./CSS/Dashboard.css">
 
 </head>
@@ -197,28 +198,28 @@
                     <i style="margin-top: 8px;" class='bx bx-chevron-right icon-right'></i>
                 </a>
                 <ul class="side-dropdown">
-                    <li class="aiz-side-nav-item">
+                    <li onclick="showProductAllOrder()" class="aiz-side-nav-item">
                         <a class="aiz-side-nav-link" href="#">
                             <i class="fas fa-arrow-right left-arrow"
-                                style="font-size: .65rem; margin-right: .75rem;"></i>Add new product
+                                style="font-size: .65rem; margin-right: .75rem;"></i>All Order
                         </a>
                     </li>
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
-                                style="font-size: .65rem; margin-right: .75rem;"></i>All wholesale products
+                                style="font-size: .65rem; margin-right: .75rem;"></i>Success Order Page
                         </a>
                     </li>
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
-                                style="font-size: .65rem; margin-right: .75rem;"></i>In House Products
+                                style="font-size: .65rem; margin-right: .75rem;"></i>Cancel Order Page
                         </a>
                     </li>
                     <li class="aiz-side-nav-item">
                         <a href="#" class="aiz-side-nav-link ">
                             <i class="fas fa-arrow-right left-arrow"
-                                style="font-size: .65rem; margin-right: .75rem;"></i>Seller Wholesale Products
+                                style="font-size: .65rem; margin-right: .75rem;"></i>Order Settings
                         </a>
                     </li>
                 </ul>
@@ -442,7 +443,7 @@
         <!-- NAVBAR -->
         <!-- main content -->
         <!-- dashboard css lines(520-604) & js lines(97-127)-->
-        <div id="userLevel2-dashboard" style="padding: 3rem 0rem;">
+        <div id="userLevel2-dashboard" style="padding: 3rem 0rem; display: none;">
             <div>
                 <p style="font-size: 1.3rem; font-weight: 600;">Welcome Back, N H Imon!</p>
                 <p style="color: #8E8E8E;">Here’s what happening with your state today</p>
@@ -737,14 +738,14 @@
         </div>
         <!-- end dashboard -->
 
-        <!-- pos system css file(posSystem.css) and js(Dashboard.js) css lines(132-207) by rita-->
+        <!-- pos system css file(posSystem.css) and js(Dashboard.js) css lines(52-760) by rita-->
         <div id="userLevel2-posSystem" style="display: none;">
             <div class="posSystem-container" style="padding: 3rem 0rem;">
-                <!-- left content css lines(52-288) -->
+                <!-- left content css lines(58-451) -->
                 <div class="left-content">
-                    <!-- header info css lines(61-107) -->
+                    <!-- header info css lines(56-224) -->
                     <div class="header-info-content">
-                        <!-- searchbar content css lines(64-92) -->
+                        <!-- searchbar content css lines(64-95) -->
                         <div class="searchber_content">
                             <form class="" action="#">
                                 <div class="form-group">
@@ -754,7 +755,7 @@
                             </form>
                         </div>
                         <!-- end searchbar -->
-                        <!-- selects category css lines(95-154) & js lines(135-150)-->
+                        <!-- selects category css lines(97-160) & js lines(218-237)-->
                         <div class="selects_category">
                             <div class="select-btn">
                                 <input type="text" class="sBtn-text" name="category" list="categories"
@@ -769,7 +770,7 @@
                             </ul>
                         </div>
                         <!-- end selects category -->
-                        <!-- selects brand css lines(157-217) & js lines(154-170)-->
+                        <!-- selects brand css lines(164-222) & js lines(240-258)-->
                         <div class="selects_brand">
                             <div class="select-btn">
                                 <input type="text" class="sBtn-text" name="category" list="categories"
@@ -787,7 +788,7 @@
                     </div>
                     <!-- end header info -->
                     <div class="menu-items" style="width: 100%;">
-                        <!--cloths items card css lines(222-288)-->
+                        <!--cloths items card css lines(228-450)-->
                         <div class="cloths-content">
                             <div class="single-item">
                                 <div style=" padding: .35rem; width: 150px; height: 150px; margin: 0 auto;">
@@ -1166,10 +1167,10 @@
                 </div>
                 <!-- item content end -->
 
-                <!--right cart content css lines(252-399)-->
+                <!--right cart content css lines(453-760)-->
                 <div class="right-content">
                     <div class="cart-selects-content">
-                        <!-- walking customer css lines(311-373) -->
+                        <!-- walking customer css lines(470-534) -->
                         <div class="walking_customer">
                             <div class="select-btn">
                                 <input type="text" class="sBtn-text" name="category" list="categories"
@@ -1303,7 +1304,7 @@
                         </div>
                         <!-- end select cart item -->
                     </div>
-
+                    <!-- percentage box css lines(592-688) and js lines(262-280)-->
                     <div class="percentage-box" style="padding: 1rem 0rem;">
                         <div class="search_box_content">
                             <div class="percentage-select">
@@ -1324,12 +1325,12 @@
                             <label for="" class="box_icon_text"><span>Apply</span></label>
                         </div>
                     </div>
-
+                    <!-- end percentage -->
                     <div style="padding: 2rem 0rem; display: flex; justify-content: center; align-items: center;">
                         <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/100/external-cart-love-flatart-icons-flat-flatarticons.png"
                             alt="external-cart-love-flatart-icons-flat-flatarticons" />
                     </div>
-                    <!-- payment-summery css lines(388-398)-->
+                    <!-- payment-summery css lines(690-760)-->
                     <div class="payment-summery">
                         <div class="summery-content" style="padding-top: .30rem;">
                             <div class="left-summery">
@@ -1365,7 +1366,7 @@
                 <!-- end cart content -->
             </div>
 
-            <!-- for Add To Cart whole popup contents css (218-302) and just popup js (99-154)-->
+            <!-- for Add To Cart whole popup contents css (296-450) and just popup js (283-295)-->
             <div class="product-wrapper">
                 <div class="project_wrap">
                     <div class="  shadow"></div>
@@ -1490,7 +1491,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end Add to cart popup -->
+            <!-- end Add to cart popup css lines() and js lines()-->
             <div id="toast-container"></div>
         </div>
         <!-- end pos system -->
@@ -2457,15 +2458,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2474,15 +2483,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2491,15 +2508,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2508,15 +2533,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2525,15 +2558,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2542,15 +2583,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2559,15 +2608,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                             <tr>
@@ -2576,15 +2633,23 @@
                                 <td data-label="Email">imuimon9@gmail.com</td>
                                 <td data-label="Plan">show which plan user using</td>
                                 <td class="table_action" data-label="Action">
-                                    <button onclick="clickAllUserTrash()" style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserTrash()"
+                                        style="background-color: #FF3860; font-weight: 500; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserEdit()" style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
+                                    <button onclick="clickAllUserEdit()"
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">
                                         <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
                                     </button>
-                                    <button onclick="clickAllUserChangePass()" class="changePass" style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change Password</button>
-                                    <button class="sendMail" style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Mail</button>
-                                    <button class="sendVarify" style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send Verify Mail</button>
+                                    <button onclick="clickAllUserChangePass()" class="changePass"
+                                        style="background-color: #198AE3; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Change
+                                        Password</button>
+                                    <button class="sendMail"
+                                        style="background-color: #004F9F; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Mail</button>
+                                    <button class="sendVarify"
+                                        style="background-color: #1BCFB4; cursor: pointer; border-radius: .40rem; color: #fff; padding: .25rem .65rem; border:none; outline: none;">Send
+                                        Verify Mail</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -2600,165 +2665,387 @@
                     </div>
                 </div>
                 <!-- end footer btn -->
-            <!--All user trash button popup css lines(153-260) and js lines(3-16)-->
-            <div class="allUsertrash-wrapper">
-                <div class="allUsertrash_project_wrap">
-                    <div class=" shadow"></div>
-                    <div class="project">
-                        <div class="headers">
-                            <div class="icons">
-                                <span class=" close_btn">
-                                    <ion-icon name="close-outline" class="i"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div style="margin: 0 auto;">
-                                <div
-                                    style="display: flex; justify-content: center; align-items: center; background-color: #f7eded; width: 70px; height: 70px; border-radius: 100%;">
-                                    <i class="fas fa-trash" style="color: #FF3F56; font-size: 1.5rem;"></i>
+                <!--All user trash button popup css lines(153-260) and js lines(3-16)-->
+                <div class="allUsertrash-wrapper">
+                    <div class="allUsertrash_project_wrap">
+                        <div class=" shadow"></div>
+                        <div class="project">
+                            <div class="headers">
+                                <div class="icons">
+                                    <span class=" close_btn">
+                                        <ion-icon name="close-outline" class="i"></ion-icon>
+                                    </span>
                                 </div>
                             </div>
-                            <div style="text-align: center;">
-                                <p style="font-size: 1.3rem; font-weight: 600;">Delete Project</p>
-                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem;">You’re going to delete the
-                                    Demo project</p>
-                            </div>
-                            <div class="trash_btn" style="margin: 0 auto;">
-                                <button style="background-color: #F5F5F7;">No, Keep It</button>
-                                <button style="color: #fff; background-color: #FF3F56;">Yes, Delete!</button>
+                            <div class="container">
+                                <div style="margin: 0 auto;">
+                                    <div
+                                        style="display: flex; justify-content: center; align-items: center; background-color: #f7eded; width: 70px; height: 70px; border-radius: 100%;">
+                                        <i class="fas fa-trash" style="color: #FF3F56; font-size: 1.5rem;"></i>
+                                    </div>
+                                </div>
+                                <div style="text-align: center;">
+                                    <p style="font-size: 1.3rem; font-weight: 600;">Delete Project</p>
+                                    <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem;">You’re going to delete
+                                        the
+                                        Demo project</p>
+                                </div>
+                                <div class="trash_btn" style="margin: 0 auto;">
+                                    <button style="background-color: #F5F5F7;">No, Keep It</button>
+                                    <button style="color: #fff; background-color: #FF3F56;">Yes, Delete!</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- end trash popup -->
+                <!-- end trash popup -->
 
-            <!--allUser change password button popup css lines(264-370) and js lines(19-30)-->
-            <div class="allUserChangePass-wrapper">
-                <div class="allUserPass_project_wrap">
-                    <div class=" shadow"></div>
-                    <div class="project">
-                        <div class="headers">
-                            <div class="icons">
-                                <span class=" close_btn">
-                                    <ion-icon name="close-outline" class="i"></ion-icon>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div style="text-align: center;">
-                                <p style="font-size: 1.3rem; font-weight: 600;">Change Your Password</p>
-                                <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">
-                                    Enter a new password below to change your password</p>
-                            </div>
-                            <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: .30rem;">
-                                <div class="allUserChangePassword-container">
-                                    <label>Password</label></br>
-                                    <input type="password" placeholder="" />
+                <!--allUser change password button popup css lines(264-370) and js lines(19-30)-->
+                <div class="allUserChangePass-wrapper">
+                    <div class="allUserPass_project_wrap">
+                        <div class=" shadow"></div>
+                        <div class="project">
+                            <div class="headers">
+                                <div class="icons">
+                                    <span class=" close_btn">
+                                        <ion-icon name="close-outline" class="i"></ion-icon>
+                                    </span>
                                 </div>
-                                <div class="allUserChangeConfirmPassword-container">
-                                    <label>Confirm Password</label></br>
-                                    <input type="password" placeholder="" />
+                            </div>
+                            <div class="container">
+                                <div style="text-align: center;">
+                                    <p style="font-size: 1.3rem; font-weight: 600;">Change Your Password</p>
+                                    <p style="color: #BBBBBB; font-weight: 400; font-size: 1rem; padding: .36rem 0rem;">
+                                        Enter a new password below to change your password</p>
                                 </div>
-                                <input
-                                    style="margin-top: .45rem; cursor: pointer; width: 100%; border: none; outline: none; background-color: #1B434D;
+                                <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: .30rem;">
+                                    <div class="allUserChangePassword-container">
+                                        <label>Password</label></br>
+                                        <input type="password" placeholder="" />
+                                    </div>
+                                    <div class="allUserChangeConfirmPassword-container">
+                                        <label>Confirm Password</label></br>
+                                        <input type="password" placeholder="" />
+                                    </div>
+                                    <input
+                                        style="margin-top: .45rem; cursor: pointer; width: 100%; border: none; outline: none; background-color: #1B434D;
                                 height: 2.6rem; color: #fff; font-size: .95rem; font-weight: 500; border-radius: .5rem;"
-                                    type="button" value="Change your password">
+                                        type="button" value="Change your password">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- end change password popup -->
+                <!-- end change password popup -->
             </div>
             <!--End Users Manges_ 1. All user-->
+            <!--  manage users edit user page css lines(379-442) -->
+            <div id="usersManage-userEdit" style="position: relative; display: none;">
+                <p style="font-size: 1.3rem; font-weight: 600;">Edit User</p>
+                <div class="usersManage-dataInput-container" style="padding: 3.5rem 0rem;">
+                    <div class="usersManage-leftInput-content">
+                        <div class="usersManage-name-container">
+                            <label>Name</label></br>
+                            <input type="text" placeholder="" />
+                        </div>
+                        <div class="usersManage-email-container">
+                            <label>Email</label></br>
+                            <input type="email" placeholder="" />
+                        </div>
+                        <div class="company-container">
+                            <label>Company</label></br>
+                            <input type="text" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="usersManage-rightInput-content">
+                        <div class="usersManage-username-container">
+                            <label>Username</label></br>
+                            <input type="text" placeholder="" />
+                        </div>
+                        <div class="usersManage-mobile-container">
+                            <label>Mobile</label></br>
+                            <input type="phone" placeholder="" />
+                        </div>
+                        <div class="address-container">
+                            <label>Address</label></br>
+                            <input type="text" placeholder="" />
+                        </div>
+                    </div>
+                </div>
+                <a href="#"><button>Submit</button></a>
+            </div>
+            <!--  end manage users edit user page -->
         </div>
         <!-- end Users Manges -->
 
-        <!-- product order manage -->
-        <div style="display: none;">
-            <div class="usersManage-allUser-table" style="padding: 1.8rem 0rem;">
-                <table class="table" id="allUser-table">
-                    <thead>
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Billing Name</th>
-                            <th>Billing Email</th>
-                            <th>Total Amount</th>
-                            <th>Payment Gateway</th>
-                            <th>Payment Status</th>
-                            <th>Order Status</th>
-                            <th>Date</th>
-                            <th>Action</th>
-                            <th>Invoice</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="Order ID">173</td>
-                            <td data-label="Billing Name">N H imon</td>
-                            <td data-label="Billing Email">imuimon9@gmail.com</td>
-                            <td data-label="Total Amount">$50</td>
-                            <td data-label="Payment Gateway">Demo</td>
-                            <td data-label="Payment Status">
-                                <button style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
-                            </td>
-                            <td data-label="Order Status">
-                                <button style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
-                            </td>
-                            <td data-label="Date">27-03-2024</td>
-                            <td class="table_action" data-label="Action">
-                                <button style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
-                                    <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
-                                </button>
-                                <button style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
-                                    <i class="fas fa-edit" style="color: #fff; cursor: pointer;"></i>
-                                </button>
-                                <button style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update Status</button>
-                            </td>
-                            <td data-label="Invoice">
-                                <button style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">MD Najmul Hasan</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                        <tr>
-                            <td data-label="ID">173</td>
-                            <td data-label="Name">N H imon</td>
-                            <td data-label="Actions">Demo</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- product order manages css files(productOrderManage.css)-->
+        <div>
+            <!-- Product order manages_ 1. All Order css lines(43-166)-->
+            <div id="productOrder-allOrder" style="padding: 3rem 0rem; display: none;">
+                <!--productOrder-allOrder-container css lines(43-102) -->
+                <div class="productOrder-allOrder-container">
+                    <div style="width: 100%;">
+                        <p style="font-size: 1.3rem; font-weight: 600;">All Orders</p>
+                        <div
+                            style="padding: .20rem 0rem; color: #909090; display: flex; align-items: center; gap: 1.5rem; font-size: 1rem; font-weight: 500;">
+                            <p>Show 10</p>
+                            <p>Entries</p>
+                        </div>
+                    </div>
+                    <div class="productOrder-allOrderSearch_content">
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search Here">
+                                <i class='bx bx-search icon'></i>
+                            </div>
+                        </form>
+                        <button><i class="fas fa-filter" style="color: #000;"></i>
+                            <span>Filter</span></button>
+                    </div>
+                </div>
+                <!-- end productOrder-allOrder-container -->
+                <div class="productOrder-allOrder-table" style="padding: 1.8rem 0rem;">
+                    <table class="table" id="productOrder_allOrder_table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Billing Name</th>
+                                <th>Billing Email</th>
+                                <th>Total Amount</th>
+                                <th>Payment Gateway</th>
+                                <th>Payment Status</th>
+                                <th>Order Status</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                                <th>Invoice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-envelope" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; width: 70px; height: 24px; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-envelope" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; width: 70px; height: 24px; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #FF6B00; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Pending</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-envelope" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Order ID">173</td>
+                                <td data-label="Billing Name">N H imon</td>
+                                <td data-label="Billing Email">imuimon9@gmail.com</td>
+                                <td data-label="Total Amount">$50</td>
+                                <td data-label="Payment Gateway">Demo</td>
+                                <td data-label="Payment Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .60rem; width: 70px; height: 24px; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Order Status">
+                                    <button
+                                        style="background-color: #00C714; cursor: pointer; border-radius: 2rem; color: #fff; width: 70px; height: 24px; padding: .15rem .60rem; border:none; outline: none;">Done</button>
+                                </td>
+                                <td data-label="Date">27-03-2024</td>
+                                <td class="productOrder-allOrder_table_action" data-label="Action">
+                                    <button
+                                        style="background-color: #9C54C8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-trash-alt" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button
+                                        style="background-color: #2BD08B; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .55rem; border:none; outline: none;">
+                                        <i class="fas fa-eye" style="color: #fff; cursor: pointer;"></i>
+                                    </button>
+                                    <button class="update-status"
+                                        style="background-color: #2562D8; cursor: pointer; border-radius: .40rem; color: #fff; padding: .22rem .45rem; border:none; outline: none;">Update
+                                        Status</button>
+                                </td>
+                                <td data-label="Invoice">
+                                    <button
+                                        style="background-color: #3E4B5B; cursor: pointer; border-radius: 2rem; color: #fff; padding: .15rem .65rem; border:none; outline: none;">Invoice</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- footer btn css lines(150-165) -->
+                <div style="width: 100%;">
+                    <div class="productsManage-allOrder">
+                        <p style="font-size: 1rem; font-weight: 500; color: #909090;">Showing 1 to 10 of 172 entries</p>
+                        <a href="#"><button
+                                style="background-color: #1B434D; border: none; outline: none; color: #fff;">Next</button></a>
+                    </div>
+                </div>
+                <!-- end footer btn -->
             </div>
+            <!--End Product order manages_ 1. All Order -->
+            <!-- Product order manages_ 2. Success Order Page css lines(43-166)-->
+            <div id="productOrder-successOrder">
+                <!--productOrder-allOrder-container css lines(43-102) -->
+                <div class="productOrder-successOrder-container">
+                    <p style="font-size: 1.3rem; font-weight: 600;">Order Success Page Settings</p>
+                    <div class="productOrder-successOrder-header">
+                        <button>English (USA)</button>
+                        <button>Arabic</button>
+                    </div>
+                </div>
+                <!-- end productOrder-allOrder-container -->
+            </div>
+            <!--End Product order manages_ 2. Success Order Page -->
         </div>
         <!-- end product order manage -->
 
